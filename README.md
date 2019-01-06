@@ -177,3 +177,24 @@ Thanks to DOC learning about metastasis, it succeeded because CNN had learned th
 I will post the transition of loss function during learning.  
 ![08](media/08.png)  
 <img src="media/09.png" width=56%>  
+
+### 8-2. Abnormality detection performance
+Next let's detect abnormality with **`g`** output. In the paper the k-neighbor method was used, but this implementation uses LOF.  
+  
+***Logic 4**  
+  
+The ROC curve is as follows.  
+![10](media/10.png)  
+  
+AUC has surprised value of **`0.90`**.  
+By the way, the overall accuracy is **`about 83%`**.  
+Compared with previous results, it is as follows.  
+  
+*VAE = Variational Autoencoder  
+
+||Performance<br>(AUC)|Inference speed<br>(millisec/1 image)|Visualization<br>accuracy|
+|:--|--:|--:|:-:|
+|VAE(Small window)|0.58|**0.80**|×|
+|VAE+Irregularization(Small window)|0.67|4.3|**◯**|
+|**DOC(MobileNetV2)**|**0.90**|140|△|
+
