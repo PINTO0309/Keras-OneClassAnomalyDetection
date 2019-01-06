@@ -186,7 +186,8 @@ I will post the transition of loss function during learning.
 ### 8-2. Abnormality detection performance
 Next let's detect abnormality with **`g`** output. In the paper the k-neighbor method was used, but this implementation uses LOF.  
   
-***Logic 4**  
+**Logic 4 : [calc_ROC.py](calc_ROC.py)**  
+<br>
   
 The ROC curve is as follows.  
 ![10](media/10.png)  
