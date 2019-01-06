@@ -232,3 +232,12 @@ When used in a classification problem, it shows the part that became the basis o
   
 This time, I tried using Grad-CAM directly in DOC.  
 ### 9-2. Results
+First of all, I tried using Grad-CAM in boots images where the abnormal score was large.  
+![13](media/13.png)  
+The vertical part of the heel part and the boots is red, and parts which are not totally similar to the sneakers are visualized.  
+Next, I will try using Grad-CAM on boots with small anomaly scores.  
+![14](media/14.png)  
+The high cut part is red, and parts that are not similar to sneakers are visualized.  
+On the whole, whether visualization succeeds or not is like feeling like 50%, there seems to be room for improvement, such as adding a Fully Connected Layer.  
+The problem is that the processing time takes about 5 seconds / image (Colaboratory-GPU) time and it can not be used in real time.  
+It seems necessary to select the scene to use.  
