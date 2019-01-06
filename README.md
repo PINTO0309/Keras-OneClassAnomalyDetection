@@ -191,6 +191,8 @@ By the way, the overall accuracy is **`about 83%`**.
 Compared with previous results, it is as follows.  
   
 *VAE = Variational Autoencoder  
+*Measurement speed is measured by Google Colaboratory's GPU  
+*Visualization of DOC is explained in the next section
 
 ||Performance<br>(AUC)|Inference speed<br>(millisec/1 image)|Visualization<br>accuracy|
 |:--|--:|--:|:-:|
@@ -198,3 +200,22 @@ Compared with previous results, it is as follows.
 |VAE+Irregularization(Small window)|0.67|4.3|**◯**|
 |**DOC(MobileNetV2)**|**0.90**|140|△|
 
+DOC was a victory over VAE in performance, but at decision speed it is slow to use LOF.  
+By the way, it was 370 millisec / 1 image when it was DOC + VGG16.  
+MobileNetV2 is fast.  
+Also, inferior accuracy "VAE + irregularity" was invented for complex images like screw threads.  
+So, for complex images, the performance may be "VAE + irregularity > DOC".  
+  
+### 8-3. Relationship between images and abnormal scores
+Next, let's look at the relationship between boots (abnormal items) images and abnormal scores.  
+The larger the abnormality score, the more likely it is that it is different from sneakers (normal items).  
+  
+First of all, it is the image of the boots where the anomaly score was large, that is judged not to resemble sneakers altogether.  
+![11](media/11.png)  
+Sure, it does not look like a sneaker at all.  
+  
+Next, it is an image of an image with a small abnormality score, that is, boots judged to be very similar to sneakers.  
+![12](media/12.png)  
+It looks like a high-cut sneaker overall.  
+Even if humans make this judgment, they may erroneously judge.  
+Intuitively, the greater the abnormality score due to DOC, the more likely it is that it deviates from normal products.  
