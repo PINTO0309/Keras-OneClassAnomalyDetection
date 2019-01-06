@@ -104,3 +104,32 @@ The learning rate seems to be <img src="https://latex.codecogs.com/gif.latex?5\t
 - Next, put the image you want to test in **`g`** and get the distribution.
 - Finally, abnormality detection is performed by using the k-nearest neighbor method in "Distribution of image of training data" and "Distribution of test image".
 
+## 7. Implementation by Keras
+The learned model uses lightweight MobileNetV2.  
+In the future, I want to implement it with RaspberryPi3.  
+
+### 7-1. Load data
+Data use this time is Fashion-MNIST.  
+And I distributed the data as follows.  
+  
+||Number<br>of<br>data|Number<br>of<br>classes|Remarks|
+|:--|--:|--:|:--|
+|Reference data|6,000|8|Excluding sneakers and boots|
+|Target data|6,000|1|sneakers|
+|Test data（Normal）|1,000|1|sneakers|
+|Test data（Abnormal）|1,000|1|boots|
+
+***Logic 1**  
+  
+### 7-2. Data resizing
+In MobileNetv2, the minimum input size is <img src="https://latex.codecogs.com/gif.latex?(96\times96\times3)" />.  
+Therefore, Fashion-MNIST <img src="https://latex.codecogs.com/gif.latex?(28\times28\times1)" /> can not be used as it is.  
+So I will resize the data.  
+
+***Logic 2**  
+  
+The figure is as follows.  
+![05](media/05.png)  
+The left figure is original data <img src="https://latex.codecogs.com/gif.latex?(28\times28\times1)" />, the right figure is after resizing <img src="https://latex.codecogs.com/gif.latex?(96\times96\times3)" />.  
+
+### 7-3. Model building and learning
