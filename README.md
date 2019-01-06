@@ -227,6 +227,7 @@ It is also important to visualize where abnormality is.
 ### 9-1. Grad-CAM
 Grad-CAM is often used for CNN classification problems.  
 When used in a classification problem, it shows the part that became the basis of that classification.  
+For details, please see the following article.  
 **[Visualization of deep learning gaze region - Qiita - bele_m](https://qiita.com/bele_m/items/a7bb15313e2a52d68865)**  
 **[With Keras, Grad-CAM, a model I made by myself - Qiita - haru1977](https://qiita.com/haru1977/items/45269d790a0ad62604b3)**  
   
