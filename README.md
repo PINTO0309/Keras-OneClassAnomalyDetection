@@ -10,4 +10,9 @@ I would like to express my deepest gratitude for having pleasantly accepted his 
 # Article translation
 There are many methods such as methods using "GAN" and methods using "AutoEncoder" for image anomaly detection using deep learning.  
 Here is an article on detecting abnormality of images using "Variational Autoencoder".  
-**[Variational Autoencoderを使った画像の異常検知](https://qiita.com/shinmura0/items/811d01384e20bfd1e035)**
+**[Variational Autoencoderを使った画像の異常検知](https://qiita.com/shinmura0/items/811d01384e20bfd1e035)**  
+
+The method to be introduced this time is to detect abnormality by devising the loss function using normal convolution neural network(CNN).  
+  
+「Learning Deep Features for One-Class Classification」 (Subsequent abbreviations, DOC)  
+**arxiv：　https://arxiv.org/abs/1801.05365**  
