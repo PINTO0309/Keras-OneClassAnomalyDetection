@@ -158,3 +158,22 @@ In addition, because it was very difficult to use Keras to simultaneously learn 
 Loss functions and simultaneous learning may be easily done with Pytorch.  
   
 ***Logic 3**  
+
+## 8. Result
+### 8-1. Look at the distribution
+Before looking at the performance of anomaly detection, visualize the distribution with t-sne.  
+The figure below shows the image of the test data <img src="https://latex.codecogs.com/gif.latex?96\times96\times3" /> as it is visualized.  
+![06](media/06.png)  
+Even if I use input data as it is, sneakers and boots are separated considerably.  
+However, some seem to be mixed.  
+  
+Next, the figure below visualizes the test data output (1280 dimension) with t-sne using CNN (MobileNetV2) learned with DOC.  
+![07](media/07.png)  
+It is well separated as in the previous figure.  
+What I want to emphasize here, CNN is that **it only learns the image of sneakers (normal items)**.  
+Nonetheless, it is surprising that sneakers and boots are well separated. It is just abnormality detection.  
+Thanks to DOC learning about metastasis, it succeeded because CNN had learned the place to see the image beforehand.  
+  
+I will post the transition of loss function during learning.  
+![08](media/08.png)  
+<img src="media/09.png" width=56%>  
