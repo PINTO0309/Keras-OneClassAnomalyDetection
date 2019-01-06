@@ -92,3 +92,6 @@ When assembling <img src="https://latex.codecogs.com/gif.latex?l_C" /> code, it 
 However, <img src="https://latex.codecogs.com/gif.latex?m" /> is the average value of the output within the batch.  
   
 <hr />
+  
+And at the time of learning, I will let you learn so that <img src="https://latex.codecogs.com/gif.latex?l_C" />, which is the variance of the output, also decreases with cross entropy <img src="https://latex.codecogs.com/gif.latex?l_D" />.  
+The learning rate seems to be <img src="https://latex.codecogs.com/gif.latex?5\times10^{-5}" />, and the weight decay is set to 0.00005.  
