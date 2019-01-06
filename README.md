@@ -79,3 +79,16 @@ Let <img src="https://latex.codecogs.com/gif.latex?n" /> be the batch size and l
 <img src="https://latex.codecogs.com/gif.latex?m_i" /> is the average value of the output except <img src="https://latex.codecogs.com/gif.latex?x_i" /> in the batch. At this time, <img src="https://latex.codecogs.com/gif.latex?l_C" /> is defined as follows.  
   
 <img src="https://latex.codecogs.com/gif.latex?{l_{C}=\frac{1}{nk}\sum_{i=1}^nz_i^Tz_i&space;}" />
+
+<hr />
+
+**＜Annotation＞**  
+As an image, (Strictly speaking it is different) <img src="https://latex.codecogs.com/gif.latex?l_C" /> can be regarded as the variance of the output within the batch.  
+When assembling <img src="https://latex.codecogs.com/gif.latex?l_C" /> code, it is troublesome to write "average value other than <img src="https://latex.codecogs.com/gif.latex?x_i" />", I used the following formula in the appendix of the paper.  
+  
+<img src="https://latex.codecogs.com/gif.latex?l_{C}=\frac{1}{nk}\sum_{i=1}^n\frac{n^2\sigma^2_i}{(n-1)^2}" />  
+<img src="https://latex.codecogs.com/gif.latex?\sigma^2_i=[x_i-m]^T[x_i-m]" />  
+  
+However, <img src="https://latex.codecogs.com/gif.latex?m" /> is the average value of the output within the batch.  
+  
+<hr />
