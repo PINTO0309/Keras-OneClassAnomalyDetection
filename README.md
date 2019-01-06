@@ -4,7 +4,7 @@ Learning Deep Features for One-Class Classification(AnomalyDetection).
 **[Jan 06, 2019] Start of work. Under construction.**  
 
 # Introduction
-This repository was created inspired by **[Image abnormality detection using deep learning ーPapers and implementationー - Qiita - shinmura0](https://qiita.com/shinmura0/items/cfb51f66b2d172f2403b#comment-9a833193b6ff6b3cb2a2)**.  
+This repository was created inspired by **[Image abnormality detection using deep learning ーPapers and implementationー - Qiita - shinmura0](https://qiita.com/shinmura0/items/cfb51f66b2d172f2403b)**.  
 I would like to express my deepest gratitude for having pleasantly accepted his skill, consideration and article quotation.  
 However, I don't have the skills to read papers, nor do I have skills to read mathematical expressions.  
 I only want to verify the effectiveness of his wonderful article content in a practical range.  
