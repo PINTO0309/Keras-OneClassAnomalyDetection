@@ -219,3 +219,15 @@ Next, it is an image of an image with a small abnormality score, that is, boots 
 It looks like a high-cut sneaker overall.  
 Even if humans make this judgment, they may erroneously judge.  
 Intuitively, the greater the abnormality score due to DOC, the more likely it is that it deviates from normal products.  
+
+## 9. Visualization by Keras
+I also tried visualization with Grad-CAM.  
+It is also important to visualize where abnormality is.  
+### 9-1. Grad-CAM
+Grad-CAM is often used for CNN classification problems.  
+When used in a classification problem, it shows the part that became the basis of that classification.  
+**[Visualization of deep learning gaze region - Qiita - bele_m](https://qiita.com/bele_m/items/a7bb15313e2a52d68865)**  
+**[With Keras, Grad-CAM, a model I made by myself - Qiita - haru1977](https://qiita.com/haru1977/items/45269d790a0ad62604b3)**  
+  
+This time, I tried using Grad-CAM directly in DOC.  
+### 9-2. Results
