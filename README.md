@@ -181,7 +181,7 @@ Thanks to DOC learning about metastasis, it succeeded because CNN had learned th
   
 I will post the transition of loss function during learning.  
 ![08](media/08.png)  
-<img src="media/09.png" width=56%>  
+![09](media/09.png)  
 
 ### 8-2. Abnormality detection performance
 Next let's detect abnormality with **`g`** output. In the paper the k-neighbor method was used, but this implementation uses LOF.  
