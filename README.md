@@ -153,3 +153,8 @@ ld.append(model_r.train_on_batch(batch_ref, batch_y))
 ```
 **`model_t.train_on_batch`** gives a dummy zero matrix because any teacher data can be used.  
 **`np.zeros((batchsize, feature_out))`**  
+  
+In addition, because it was very difficult to use Keras to simultaneously learn <img src="https://latex.codecogs.com/gif.latex?l_D" /> and <img src="https://latex.codecogs.com/gif.latex?l_C" />, I tried a method to let the machine learn <img src="https://latex.codecogs.com/gif.latex?l_D" /> after learning with <img src="https://latex.codecogs.com/gif.latex?l_C" />.  
+Loss functions and simultaneous learning may be easily done with Pytorch.  
+  
+***Logic 3**  
