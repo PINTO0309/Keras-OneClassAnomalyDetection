@@ -133,3 +133,23 @@ The figure is as follows.
 The left figure is original data <img src="https://latex.codecogs.com/gif.latex?(28\times28\times1)" />, the right figure is after resizing <img src="https://latex.codecogs.com/gif.latex?(96\times96\times3)" />.  
 
 ### 7-3. Model building and learning
+During learning, the weight is fixed for the second half of the convolution layer.  
+I will explain a part of the code here.  
+Using Keras, building a model was easy, but building the following loss function was extremely difficult.  
+```python
+def original_loss(y_true, y_pred):
+    lc = 1/(classes*batchsize) * batchsize**2 * K.sum((y_pred -K.mean(y_pred,axis=0))**2,axis=[1]) / ((batchsize-1)**2)
+    return lc
+```
+And the part to be careful is the following part.  
+```python
+#target data
+#Get loss while learning
+lc.append(model_t.train_on_batch(batch_target, np.zeros((batchsize, feature_out))))
+            
+#reference data
+#Get loss while learning
+ld.append(model_r.train_on_batch(batch_ref, batch_y))
+```
+**`model_t.train_on_batch`** gives a dummy zero matrix because any teacher data can be used.  
+**`np.zeros((batchsize, feature_out))`**  
