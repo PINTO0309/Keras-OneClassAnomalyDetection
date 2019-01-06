@@ -37,4 +37,6 @@ In the figure below, we learned under various conditions using normal CNN and vi
 
 I think that it is not only me that thinking that abnormality can be detected also in figure (b).  
 However, it is somewhat inferior to figure (e).  
-
+  
+In the thesis, it finally uses "k neighborhood method" in (e) to detect abnormality.  
+As a learning method, view the images that you want to detect abnormality at the same time, completely different kinds of images, and narrow down the range of the images for which you want to detect anomalies.
