@@ -95,3 +95,12 @@ However, <img src="https://latex.codecogs.com/gif.latex?m" /> is the average val
   
 And at the time of learning, I will let you learn so that <img src="https://latex.codecogs.com/gif.latex?l_C" />, which is the variance of the output, also decreases with cross entropy <img src="https://latex.codecogs.com/gif.latex?l_D" />.  
 The learning rate seems to be <img src="https://latex.codecogs.com/gif.latex?5\times10^{-5}" />, and the weight decay is set to 0.00005.  
+
+## 6. Test phase
+![04](media/04.png)  
+
+- Remove **`h`** from the model.
+- First, bring in the image from the learning data of the target data, put it in **`g`**, and obtain the distribution.
+- Next, put the image you want to test in **`g`** and get the distribution.
+- Finally, abnormality detection is performed by using the k-nearest neighbor method in "Distribution of image of training data" and "Distribution of test image".
+
