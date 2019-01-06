@@ -39,4 +39,12 @@ I think that it is not only me that thinking that abnormality can be detected al
 However, it is somewhat inferior to figure (e).  
   
 In the thesis, it finally uses "k neighborhood method" in (e) to detect abnormality.  
-As a learning method, view the images that you want to detect abnormality at the same time, completely different kinds of images, and narrow down the range of the images for which you want to detect anomalies.
+As a learning method, view the images that you want to detect abnormality at the same time, completely different kinds of images, and narrow down the range of the images for which you want to detect anomalies.  
+
+## 3. Preparing data
+For learning, prepare the following data.  
+
+|Dataset name|Contents|Concrete example|Number of classes|
+|:--|:--|:--|:-:|
+|Target data|Image you want to detect abnormality|Product etc.|1|
+|Reference data|A data set not related to the above|ImageNet and CIFAR-10|10 or 1,000 or more|
