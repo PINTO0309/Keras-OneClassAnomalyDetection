@@ -48,3 +48,13 @@ For learning, prepare the following data.
 |:--|:--|:--|:-:|
 |Target data|Image you want to detect abnormality|Product etc.|1|
 |Reference data|A data set not related to the above|ImageNet and CIFAR-10|10 or 1,000 or more|
+
+## 4. Preparing the model
+![03](media/03.png)  
+
+- The deep learning model **`g`** prepares a learned model.
+- In the paper, **`g`** uses Alexnet and VGG16. **`h`** is 1,000 nodes for ImageNet, 10 nodes for CIFAR-10.
+- During learning, **`g`** and h of Reference Network (R) and Secondary Network (S) are shared.
+- Also, during learning, the weights are fixed except for the last four layers.
+
+## 5. Learning phase
