@@ -26,3 +26,15 @@ The method to be introduced this time is to detect abnormality by devising the l
 In conclusion, it was found that **this method has good anomaly detection accuracy** and visualization of abnormal spots is also possible.  
 
 ## 2. Overview
+This paper states that it achieved state-of-the-art at the time of publication.  
+In the figure below, we learned under various conditions using normal CNN and visualized the output from the convolution layer with t-SNE.  
+  
+![02](media/02.png)
+  
+- Figure (b): Alexnet's learned model with Normal and Abnormal distributed
+- Figure (c): Diagram learned with Normal vs Abnormal
+- Figure (e): Proposed method (DOC)
+
+I think that it is not only me that thinking that abnormality can be detected also in figure (b).  
+However, it is somewhat inferior to figure (e).  
+
