@@ -120,14 +120,17 @@ And I distributed the data as follows.
 |Test data（Normal）|1,000|1|sneakers|
 |Test data（Abnormal）|1,000|1|boots|
 
-***Logic 1**  
   
+**Logic 1 : [data_loader.py](data_loader.py)**  
+<br>
+
 ### 7-2. Data resizing
 In MobileNetv2, the minimum input size is <img src="https://latex.codecogs.com/gif.latex?(96\times96\times3)" />.  
 Therefore, Fashion-MNIST <img src="https://latex.codecogs.com/gif.latex?(28\times28\times1)" /> can not be used as it is.  
 So I will resize the data.  
-
-***Logic 2**  
+  
+**Logic 2 : [data_resizer.py](data_resizer.py)**  
+<br>
   
 The figure is as follows.  
 ![05](media/05.png)  
@@ -158,8 +161,9 @@ ld.append(model_r.train_on_batch(batch_ref, batch_y))
 In addition, because it was very difficult to use Keras to simultaneously learn <img src="https://latex.codecogs.com/gif.latex?l_D" /> and <img src="https://latex.codecogs.com/gif.latex?l_C" />, I tried a method to let the machine learn <img src="https://latex.codecogs.com/gif.latex?l_D" /> after learning with <img src="https://latex.codecogs.com/gif.latex?l_C" />.  
 Loss functions and simultaneous learning may be easily done with Pytorch.  
   
-***Logic 3**  
-
+**Logic 3 : [train.py](train.py)**  
+<br>
+  
 ## 8. Result
 ### 8-1. Look at the distribution
 Before looking at the performance of anomaly detection, visualize the distribution with t-sne.  
