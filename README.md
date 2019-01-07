@@ -4,12 +4,22 @@ Learning Deep Features for One-Class Classification(AnomalyDetection).
 **[Jan 06, 2019] Start of work. Under construction.**  
 
 # Introduction
-This repository was created inspired by  
-**[Image abnormality detection using deep learning ーPapers and implementationー - Qiita - shinmura0](https://qiita.com/shinmura0/items/cfb51f66b2d172f2403b)**.  
+This repository was inspired by **[Image abnormality detection using deep learning ーPapers and implementationー - Qiita - shinmura0](https://qiita.com/shinmura0/items/cfb51f66b2d172f2403b)** and was created.    
 I would like to express my deepest gratitude for having pleasantly accepted his skill, consideration and article quotation.  
 His articles that were supposed to be used practically, not limited to logic alone, are wonderful.  
 However, I don't have the skills to read papers, nor do I have skills to read mathematical expressions.  
 I only want to verify the effectiveness of his wonderful article content in a practical range.  
+
+# Environment (example)
+1. Ubuntu 16.04
+2. Geforce GTX 1070
+3. Python 3.5
+4. Tensorflow-gpu 1.12.0
+5. Keras 2.2.4
+6. numpy 1.15.3
+7. matplotlib 3.0.1
+8. PIL 5.3.0
+9. OpenCV 4.0.1-openvino
 
 # Translating shinmura0's article
 ## 1. Introduction
@@ -181,7 +191,7 @@ Thanks to DOC learning about metastasis, it succeeded because CNN had learned th
   
 I will post the transition of loss function during learning.  
 ![08](media/08.png)  
-<img src="media/09.png" width=56%>  
+![09](media/09.png)  
 
 ### 8-2. Abnormality detection performance
 Next let's detect abnormality with **`g`** output. In the paper the k-neighbor method was used, but this implementation uses LOF.  
