@@ -13,11 +13,12 @@ I only want to verify the effectiveness of his wonderful article content in a pr
 # Environment
 1. Ubuntu 16.04
 2. Python 3.5
-3. Keras 2.2.4
-4. numpy 1.15.3
-5. matplotlib 3.0.1
-6. PIL 5.3.0
-7. OpenCV 4.0.1-openvino
+3. Tensorflow-gpu 1.12.0
+4. Keras 2.2.4
+5. numpy 1.15.3
+6. matplotlib 3.0.1
+7. PIL 5.3.0
+8. OpenCV 4.0.1-openvino
 
 # Translating shinmura0's article
 ## 1. Introduction
