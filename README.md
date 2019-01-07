@@ -10,15 +10,16 @@ His articles that were supposed to be used practically, not limited to logic alo
 However, I don't have the skills to read papers, nor do I have skills to read mathematical expressions.  
 I only want to verify the effectiveness of his wonderful article content in a practical range.  
 
-# Environment
+# Environment (example)
 1. Ubuntu 16.04
-2. Python 3.5
-3. Tensorflow-gpu 1.12.0
-4. Keras 2.2.4
-5. numpy 1.15.3
-6. matplotlib 3.0.1
-7. PIL 5.3.0
-8. OpenCV 4.0.1-openvino
+2. Geforce GTX 1070
+3. Python 3.5
+4. Tensorflow-gpu 1.12.0
+5. Keras 2.2.4
+6. numpy 1.15.3
+7. matplotlib 3.0.1
+8. PIL 5.3.0
+9. OpenCV 4.0.1-openvino
 
 # Translating shinmura0's article
 ## 1. Introduction
