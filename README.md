@@ -20,6 +20,7 @@ I only want to verify the effectiveness of his wonderful article content in a pr
 7. matplotlib 3.0.1
 8. PIL 5.3.0
 9. OpenCV 4.0.1-openvino
+10. sklearn 0.20.0
 
 # Translating shinmura0's article
 ## 1. Introduction
