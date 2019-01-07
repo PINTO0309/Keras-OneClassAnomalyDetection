@@ -1,4 +1,4 @@
-from keras.applications import MobileNetV2, VGG16
+from keras.applications.mobilenetv2 import MobileNetV2#, VGG16
 from keras.optimizers import SGD
 from keras.models import Model
 from keras.layers import GlobalAveragePooling2D, Dense
@@ -32,7 +32,7 @@ def train(x_target, x_ref, y_ref, epoch_num):
     for layer in mobile.layers:
         if layer.name == "block_13_expand": #""block5_conv1":
             break
-        else
+        else:
             layer.trainable = False
 
     model_t = mobile
