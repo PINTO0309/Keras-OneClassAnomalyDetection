@@ -28,14 +28,17 @@ def train(x_target, x_ref, y_ref, epoch_num):
     #Read mobile net, S network
     mobile = MobileNetV2(include_top=False, input_shape=input_shape, alpha=alpha, depth_multiplier=1, weights='imagenet')
 
+    #Delete last layer
+    mobile.layers.pop()
+
     #Fixed weight
     for layer in mobile.layers:
-        if layer.name == "block_13_expand": #""block5_conv1":
+        if layer.name == "block_13_expand": # "block5_conv1": for VGG16
             break
         else:
             layer.trainable = False
 
-    model_t = mobile
+    model_t = Model(inputs=mobile.input,outputs=mobile.layers[-1].output)
 
     #R network　S and Weight sharing
     model_r = Network(inputs=model_t.input,
@@ -43,10 +46,8 @@ def train(x_target, x_ref, y_ref, epoch_num):
                       name="shared_layer")
 
     #Apply a Fully Connected Layer to R
-    x = model_t.output
-    x = GlobalAveragePooling2D()(x)
-    prediction = Dense(classes, activation='softmax')(x)
-    model_r = Model(inputs=model_r.input, outputs=prediction)
+    prediction = Dense(classes, activation='softmax')(model_t.output)
+    model_r = Model(inputs=model_r.input,outputs=prediction)
 
     #Compile
     optimizer = SGD(lr=5e-5, decay=0.00005)
