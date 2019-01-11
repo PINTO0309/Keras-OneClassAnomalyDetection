@@ -258,3 +258,6 @@ The high cut part is red, and parts that are not similar to sneakers are visuali
 On the whole, whether visualization succeeds or not is like feeling like 50%, there seems to be room for improvement, such as adding a Fully Connected Layer.  
 The problem is that the processing time takes about 5 seconds / image (Colaboratory-GPU) time and it can not be used in real time.  
 It seems necessary to select the scene to use.  
+
+For RaspberryPi3, coming soon.
+![001](media/001.gif)
