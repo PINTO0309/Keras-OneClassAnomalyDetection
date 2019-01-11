@@ -259,5 +259,5 @@ On the whole, whether visualization succeeds or not is like feeling like 50%, th
 The problem is that the processing time takes about 5 seconds / image (Colaboratory-GPU) time and it can not be used in real time.  
 It seems necessary to select the scene to use.  
 
-For RaspberryPi3, coming soon.
+DOC with RaspberryPi3 is coming soon.  
 ![001](media/001.gif)
