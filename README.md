@@ -314,3 +314,45 @@ Please take a picture along the following notes.
 2. Connect USB camera and execute DOC/main.py.
 3. When the image of the USB Camera is displayed, press the **`p`** key to take a picture.
 4. By shooting about 10 images, sufficient accuracy can be obtained.
+### 10-5.Resizing the image for learning
+After taking a picture, upload the DOC/pictures folder to Google Drive.  
+And from here you will process it on Google Colaboratory.  
+Please refer to **[The story that it was easy to mount on Google Drive at Colaboratory - Qiita - k_uekado](https://qiita.com/k_uekado/items/45b76f9a6f920bf0f786)** on how to mount Google Drive on Google Colaboratory.  
+  
+In order to let you learn on MobileNet V2, resize the image with the following code.  
+```python
+import cv2
+import numpy as np
+import os
+from PIL import Image
+from keras.preprocessing import image
+from keras.preprocessing.image import array_to_img
+
+img_path = 'pictures/'
+NO = 1
+
+def resize(x):
+    x_out = []
+
+    for i in range(len(x)):
+        img = cv2.resize(x[i],dsize=(96,96))
+        x_out.append(img)
+
+    return np.array(x_out)
+
+x = []
+
+while True:
+    if not os.path.exists(img_path + str(NO) + ".jpg"):
+        break
+    img = Image.open(img_path + str(NO) + ".jpg")
+    img = image.img_to_array(img)
+    x.append(img)
+    NO += 1
+
+x_train = resize(x)
+```
+Before resizing on the left figure. <img src="https://latex.codecogs.com/gif.latex?(288\times288\times3)" />  
+After resizing the figure on the right. <img src="https://latex.codecogs.com/gif.latex?(96\times96\times3)" />  
+![17](media/17.png)  
+
