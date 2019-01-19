@@ -16,6 +16,7 @@ To be honest, I am not engaged in the work of making a program.
 # Environment (example)
 1. Ubuntu 16.04
 2. Geforce GTX 1070
+3. CUDA 9.0 + cuDNN 7.2
 3. Python 3.5
 4. Tensorflow-gpu 1.12.0 (pip install)
 5. Keras 2.2.4
