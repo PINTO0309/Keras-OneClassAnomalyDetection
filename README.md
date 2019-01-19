@@ -304,3 +304,6 @@ $ python3 main.py
 ### 10-3.Learning by original data set
 For those who want to training models themselves, the technical contents are described below.  
 The overall flow is as shown in the figure below.  
+![16](media/16.png)  
+Since the calculation load is not high, it is possible to complete all processes with RaspberryPi.  
+However, in order to download CIFAR 10, it needs to be processed by a terminal connected to the network.  
