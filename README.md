@@ -508,7 +508,7 @@ $ netron -b [MODEL_FILE]
 ## 13. Model Convert
 ### 13-1. MMdnn
 ```bash
-$ sudo -H pip3 install mmdnn
+$ sudo -H pip3 install -U git+https://github.com/Microsoft/MMdnn.git@master
 $ sudo -H pip3 install onnx-tf
 $ mmconvert -h
 usage: mmconvert [-h]
