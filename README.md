@@ -543,8 +543,7 @@ $ mmconvert \
 -iw OneClassAnomalyDetection-RaspberryPi3/DOC/model/weights.h5 \
 -in OneClassAnomalyDetection-RaspberryPi3/DOC/model/model.json \
 -df tensorflow \
--om models/tensorflow/weights.pb \
---dump_tag SERVING
+-om models/tensorflow/weights
 ```
 ### 13-3. Keras -> ONNX
 ```bash
@@ -553,5 +552,5 @@ $ mmconvert \
 -iw OneClassAnomalyDetection-RaspberryPi3/DOC/model/weights.h5 \
 -in OneClassAnomalyDetection-RaspberryPi3/DOC/model/model.json \
 -df onnx \
--om models/onnx/weights.onnx
+-om models/onnx/weights
 ```
