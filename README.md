@@ -296,3 +296,5 @@ $ python3 main.py
 **[Note]**
 - **Since abnormality test runs RaspberryPi fully, it will freeze with thermal runaway after about 5 minutes.**
 - **When operating for a long time, please operate while cooling.**
+- **If "human face" appears, the score falls. (Normal)**
+- **If "human face" is not appeared, the score will rise. (Abnormality)**
