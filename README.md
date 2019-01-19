@@ -455,3 +455,4 @@ np.savetxt(model_path + "train.csv",train[:train_num],delimiter=",")
 ```
 The "model" folder contains three files "model.json", "weights.h5" and "train.csv".  
 **`train_num = 1000 # number of training data`** is an acceleration parameter of LOF.  
+### 10-9.Execution of inference with RaspberryPi
