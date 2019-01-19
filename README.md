@@ -4,7 +4,7 @@ Learning Deep Features for One-Class Classification(AnomalyDetection).
 **[Jan 06, 2019] Start of work. Under construction.**  
 
 # Introduction
-This repository was inspired by **[Image abnormality detection using deep learning ーPapers and implementationー - Qiita - shinmura0](https://qiita.com/shinmura0/items/cfb51f66b2d172f2403b)** and was created.    
+This repository was inspired by **[Image abnormality detection using deep learning ーPapers and implementationー - Qiita - shinmura0](https://qiita.com/shinmura0/items/cfb51f66b2d172f2403b)**, **[Image inspection machine for people trying hard - Qiita - shinmura0](https://qiita.com/shinmura0/items/7f4298b75d6b788bba80)** and was created.    
 I would like to express my deepest gratitude for having pleasantly accepted his skill, consideration and article quotation.  
 His articles that were supposed to be used practically, not limited to logic alone, are wonderful.  
 However, I don't have the skills to read papers, nor do I have skills to read mathematical expressions.  
@@ -291,3 +291,14 @@ $ cd OneClassAnomalyDetection-RaspberryPi3/DOC
 $ python3 main.py
 ```
 4.When the real-time image of USB camera is drawn, please press **`s`** key.  
+5.When the score is displayed, an abnormality test is started.
+
+**[Note]**
+- **Since abnormality test runs RaspberryPi fully, it will freeze with thermal runaway after about 5 minutes.**
+- **When operating for a long time, please operate while cooling.**
+- **If "human face" appears, the score falls. (Normal)**
+- **If "human face" is not appeared, the score will rise. (Abnormality)**
+- **Learning was executed with [CelebA](http://aidiary.hatenablog.com/entry/20180311/1520762446).**
+### 10-3.Learning by original data set
+For those who want to training models themselves, the technical contents are described below.  
+The overall flow is as shown in the figure below.  
