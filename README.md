@@ -17,11 +17,14 @@ To be honest, I am not engaged in the work of making a program.
 3. Python 3.5
 4. Tensorflow-gpu 1.12.0 (pip install)
 5. Keras 2.2.4
-6. numpy 1.15.3
-7. matplotlib 3.0.1
-8. PIL 5.3.0
-9. OpenCV 4.0.1-openvino
-10. sklearn 0.20.0
+6. PyTorch 1.0.0
+7. torchvision 0.2.1
+8. Caffe
+9. numpy 1.15.3
+10. matplotlib 3.0.1
+11. PIL 5.3.0
+12. OpenCV 4.0.1-openvino
+13. sklearn 0.20.0
 
 # Translating shinmura0's article
 ## 1. Introduction
@@ -562,4 +565,13 @@ $ mmconvert \
 -in OneClassAnomalyDetection-RaspberryPi3/DOC/model/model.json \
 -df caffe \
 -om models/caffe/weights
+```
+### 13-5. Keras -> PyTorch
+```bash
+$ mmconvert \
+-sf keras \
+-iw OneClassAnomalyDetection-RaspberryPi3/DOC/model/weights.h5 \
+-in OneClassAnomalyDetection-RaspberryPi3/DOC/model/model.json \
+-df pytorch \
+-om models/pytorch/weights.pth
 ```
