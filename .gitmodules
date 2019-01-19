@@ -4,3 +4,6 @@
 [submodule "keras2tensorflow"]
 	path = keras2tensorflow
 	url = https://github.com/amir-abdi/keras_to_tensorflow.git
+[submodule "mmdnn"]
+	path = mmdnn
+	url = https://github.com/Microsoft/MMdnn.git
