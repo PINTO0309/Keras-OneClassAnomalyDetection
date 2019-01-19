@@ -273,3 +273,9 @@ DOC with RaspberryPi3 is coming soon.
   - Surveillance camera **[here](https://jpn.nec.com/press/201812/20181211_02.html)**
 ## 10-1. How to use
 If you want to try it immediately, please try **[this (Face Detection)](https://github.com/shinmura0/OneClassAnomalyDetection-RaspberryPi3/tree/a98388d3795d046e3ced059df130191a9ebbff0d)**.
+## 10-2. Environment
+1. Numpy 1.15.4
+2. scikit-learn 0.19.2+
+3. Keras 2.2.4
+4. OpenCV 4.0.1-openvino
+
