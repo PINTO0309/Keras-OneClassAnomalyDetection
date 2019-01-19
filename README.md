@@ -287,6 +287,7 @@ $ git submodule update
 2.Connect USB Camera to RaspberryPi.  
 3.Execute below.  
 ```bash
-$ python3 OneClassAnomalyDetection-RaspberryPi3/DOC/main.py
+$ cd OneClassAnomalyDetection-RaspberryPi3/DOC
+$ python3 main.py
 ```
 4.When the real-time image of USB camera is drawn, please press **`s`** key.  
