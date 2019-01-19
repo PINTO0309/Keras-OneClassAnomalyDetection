@@ -362,3 +362,5 @@ The number of various data is as follows.
 |:--|--:|--:|:--|
 |Reference data|6,000|10|CIFAR10|
 |Target data|6,000|1|Image of nut|
+
+Infrate the captured image (target data) with Data Augmentation.  
