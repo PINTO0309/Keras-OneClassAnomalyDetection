@@ -494,3 +494,5 @@ So, I am constructing LOF using 1000 learning data this time.
 As a result, performance and reasoning speed can be incorporated in a well-balanced manner, reducing the time by 180 msec or more.  
 As a result, the inference time of DOC + LOF is about 200 msec (5 FPS) with RaspberryPi alone.  
 If you use the GPU, it may run at 20 msec (50 FPS).  
+## 12. Structure of the model
+<img src="media/26.png" width=20%>  
