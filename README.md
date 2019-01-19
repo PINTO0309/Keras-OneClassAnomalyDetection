@@ -509,6 +509,7 @@ $ netron -b [MODEL_FILE]
 ### 13-1. MMdnn
 ```bash
 $ sudo -H pip3 install mmdnn
+$ sudo -H pip3 install onnx-tf
 $ mmconvert -h
 usage: mmconvert [-h]
                  [--srcFramework {caffe,caffe2,cntk,mxnet,keras,tensorflow,tf,pytorch}]
