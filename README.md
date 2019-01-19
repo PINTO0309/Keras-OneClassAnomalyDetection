@@ -319,7 +319,7 @@ After taking a picture, upload the DOC/pictures folder to Google Drive.
 And from here you will process it on Google Colaboratory.  
 Please refer to **[The story that it was easy to mount on Google Drive at Colaboratory - Qiita - k_uekado](https://qiita.com/k_uekado/items/45b76f9a6f920bf0f786)** on how to mount Google Drive on Google Colaboratory.  
   
-In order to let you learn on MobileNet V2, resize the image with the following code.  
+In order to let you learn on MobileNetV2, resize the image with the following code.  
 ```python
 import cv2
 import numpy as np
@@ -355,4 +355,10 @@ x_train = resize(x)
 Before resizing on the left figure. <img src="https://latex.codecogs.com/gif.latex?(288\times288\times3)" />  
 After resizing the figure on the right. <img src="https://latex.codecogs.com/gif.latex?(96\times96\times3)" />  
 ![17](media/17.png)  
+### 10-6.Data Augmentation
+The number of various data is as follows.  
 
+|Contents|Number|Number<br>of<br>Classes|Note|
+|:--|--:|--:|:--|
+|Reference data|6,000|10|CIFAR10|
+|Target data|6,000|1|Image of nut|
