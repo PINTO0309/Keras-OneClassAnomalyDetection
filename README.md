@@ -462,3 +462,22 @@ The "model" folder contains three files "model.json", "weights.h5" and "train.cs
 $ cd OneClassAnomalyDetection-RaspberryPi3/DOC
 $ python3 main.py
 ```
+The **`threshold`** defined in **`main.py`** is the threshold.  
+Beyond this the score will be in the red.  
+Anomaly score is moving average of 10 inference.  
+### 10-10.Results
+The result of verification with nut image is shown.  
+Pictures of normal products are as follows.  
+![20](media/20.jpeg)  
+  
+Normal product A (score 1.3) → Abnormal product (rust, score 1.6)  
+![21](media/21.gif)  
+  
+Normal product A (score 1.4) → Abnormal item (size difference, score 2 or more)  
+![22](media/22.gif)  
+  
+Move the normal item A (scores of differences in position are hardly seen)  
+![23](media/23.gif)  
+  
+Normal product B (score 1.2) → Normal product A (score 1.3)  
+![24](media/24.gif)  
