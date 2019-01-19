@@ -554,3 +554,12 @@ $ mmconvert \
 -df onnx \
 -om models/onnx/weights.onnx
 ```
+### 13-4. Keras -> Caffe
+```bash
+$ mmconvert \
+-sf keras \
+-iw OneClassAnomalyDetection-RaspberryPi3/DOC/model/weights.h5 \
+-in OneClassAnomalyDetection-RaspberryPi3/DOC/model/model.json \
+-df caffe \
+-om models/caffe/weights
+```
