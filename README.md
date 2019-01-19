@@ -307,3 +307,10 @@ The overall flow is as shown in the figure below.
 ![16](media/16.png)  
 Since the calculation load is not high, it is possible to complete all processes with RaspberryPi.  
 However, in order to download CIFAR 10, it needs to be processed by a terminal connected to the network.  
+### 10-4.Acquisition of learning image data
+First, you take pictures for learning.  
+Please take a picture along the following notes.  
+1. Delete the model folder from the downloaded DOC folder (booting will be faster).
+2. Connect USB camera and execute DOC/main.py.
+3. When the image of the USB Camera is displayed, press the **`p`** key to take a picture.
+4. By shooting about 10 images, sufficient accuracy can be obtained.
