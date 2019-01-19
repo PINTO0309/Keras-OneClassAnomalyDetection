@@ -1,5 +1,5 @@
 # Keras-OneClassAnomalyDetection
-Learning Deep Features for One-Class Classification(AnomalyDetection).  
+Learning Deep Features for One-Class Classification (AnomalyDetection).  
   
 **[Jan 19, 2019] First Release.**  
 
