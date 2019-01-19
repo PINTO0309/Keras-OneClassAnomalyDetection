@@ -261,3 +261,13 @@ It seems necessary to select the scene to use.
 
 DOC with RaspberryPi3 is coming soon.  
 ![001](media/001.gif)
+
+## 10. Implementation by RaspberryPi
+- Cost is $100 or less (conventional products have over $9,000)
+- Absolute detection accuracy is the highest peak (state-of-the-art at the time of publication)
+- Compact (RaspberryPi and Web Camera only)
+- Despite using deep learning at RaspberryPI it is fast (5 FPS)
+- Application areas
+  - Visual inspection of industrial products
+  - Appearance inspection of bridges by drone **[here](http://www.tobu.co.jp/file/pdf/0f5fc3eafc73a1e18b62c9008c0385b4/newsletter_180413.pdf?date=20180413133524)**
+  - Surveillance camera **[here](https://jpn.nec.com/press/201812/20181211_02.html)**
