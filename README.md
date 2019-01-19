@@ -545,3 +545,12 @@ $ mmconvert \
 -om models/tensorflow \
 --dump_tag SERVING
 ```
+### 13-3. Keras -> ONNX
+```bash
+$ mmconvert \
+-sf keras \
+-iw OneClassAnomalyDetection-RaspberryPi3/DOC/model/weights.h5 \
+-in OneClassAnomalyDetection-RaspberryPi3/DOC/model/model.json \
+-df onnx \
+-om models/onnx
+```
