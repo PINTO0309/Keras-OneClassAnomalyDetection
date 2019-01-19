@@ -481,3 +481,10 @@ Move the normal item A (scores of differences in position are hardly seen)
   
 Normal product B (score 1.2) → Normal product A (score 1.3)  
 ![24](media/24.gif)  
+
+## 11. Acceleration of LOF
+I will write about speedup of LOF.  
+Unlike neural networks, LOF changes the inference time greatly depending on the number of learning data.  
+The figure below shows the relationship between the number of LOF learning data and inference time, using sneaker data.  
+![25](media/25.png)  
+Since LOF stores learning data and detects abnormality just like the k-nearest neighbor method, as the number of learning data increases, inference time increases accidentally.  
