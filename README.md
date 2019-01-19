@@ -1,7 +1,7 @@
 # Keras-OneClassAnomalyDetection
 Learning Deep Features for One-Class Classification(AnomalyDetection).  
   
-**[Jan 06, 2019] Start of work. Under construction.**  
+**[Jan 19, 2019] First Release.**  
 
 # Introduction
 This repository was inspired by **[Image abnormality detection using deep learning ーPapers and implementationー - Qiita - shinmura0](https://qiita.com/shinmura0/items/cfb51f66b2d172f2403b)**, **[Image inspection machine for people trying hard - Qiita - shinmura0](https://qiita.com/shinmura0/items/7f4298b75d6b788bba80)** and was created.    
