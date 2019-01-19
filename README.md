@@ -1,7 +1,7 @@
 # Keras-OneClassAnomalyDetection
 Learning Deep Features for One-Class Classification(AnomalyDetection).  
   
-**[Jan 06, 2019] Start of work. Under construction.**  
+**[Jan 19, 2019] First Release.**  
 
 # Introduction
 This repository was inspired by **[Image abnormality detection using deep learning ーPapers and implementationー - Qiita - shinmura0](https://qiita.com/shinmura0/items/cfb51f66b2d172f2403b)**, **[Image inspection machine for people trying hard - Qiita - shinmura0](https://qiita.com/shinmura0/items/7f4298b75d6b788bba80)** and was created.    
@@ -282,6 +282,7 @@ If you want to try it immediately, please try **[this (Face Detection)](https://
 1.Execute below.  
 ```bash
 $ git clone https://github.com/PINTO0309/Keras-OneClassAnomalyDetection.git
+$ cd Keras-OneClassAnomalyDetection
 $ git submodule update
 ```
 2.Connect USB Camera to RaspberryPi.  
@@ -494,3 +495,5 @@ So, I am constructing LOF using 1000 learning data this time.
 As a result, performance and reasoning speed can be incorporated in a well-balanced manner, reducing the time by 180 msec or more.  
 As a result, the inference time of DOC + LOF is about 200 msec (5 FPS) with RaspberryPi alone.  
 If you use the GPU, it may run at 20 msec (50 FPS).  
+## 12. Structure of the model
+<img src="media/26.png" width=20%>  
