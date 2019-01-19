@@ -1,5 +1,7 @@
 # Keras-OneClassAnomalyDetection
 Learning Deep Features for One-Class Classification (AnomalyDetection).  
+Corresponds RaspberryPi3.  
+Convert to Tensorflow, ONNX, Caffe, PyTorch.  
   
 **[Jan 19, 2019] First Release.**  
 
