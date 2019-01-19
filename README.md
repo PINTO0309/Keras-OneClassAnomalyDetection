@@ -279,14 +279,14 @@ DOC with RaspberryPi3 is coming soon.
 ## 10-2. How to use
 If you want to try it immediately, please try **[this (Face Detection)](https://github.com/shinmura0/OneClassAnomalyDetection-RaspberryPi3/tree/a98388d3795d046e3ced059df130191a9ebbff0d)**.
 
-1.Execute below.
+1.Execute below.  
 ```bash
 $ git clone https://github.com/PINTO0309/Keras-OneClassAnomalyDetection.git
 $ git submodule update
 ```
-2.Connect USB Camera to RaspberryPi.
-3.Execute below.
+2.Connect USB Camera to RaspberryPi.  
+3.Execute below.  
 ```bash
 $ python3 OneClassAnomalyDetection-RaspberryPi3/DOC/main.py
 ```
-4.When the real-time image of USB camera is drawn, please press "s" key.
+4.When the real-time image of USB camera is drawn, please press "s" key.  
