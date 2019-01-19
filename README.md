@@ -496,4 +496,10 @@ As a result, performance and reasoning speed can be incorporated in a well-balan
 As a result, the inference time of DOC + LOF is about 200 msec (5 FPS) with RaspberryPi alone.  
 If you use the GPU, it may run at 20 msec (50 FPS).  
 ## 12. Structure of the model
+1. Execute below.  
+```bash
+$ sudo -H pip3 install netron
+$ netron -b [MODEL_FILE]
+```
+2. Access http://localhost:8080 from the browser.  
 <img src="media/26.png" width=20%>  
