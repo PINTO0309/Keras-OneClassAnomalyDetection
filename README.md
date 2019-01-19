@@ -289,4 +289,4 @@ $ git submodule update
 ```bash
 $ python3 OneClassAnomalyDetection-RaspberryPi3/DOC/main.py
 ```
-4.When the real-time image of USB camera is drawn, please press "s" key.  
+4.When the real-time image of USB camera is drawn, please press **`s`** key.  
