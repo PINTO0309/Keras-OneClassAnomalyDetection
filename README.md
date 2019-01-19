@@ -552,5 +552,5 @@ $ mmconvert \
 -iw OneClassAnomalyDetection-RaspberryPi3/DOC/model/weights.h5 \
 -in OneClassAnomalyDetection-RaspberryPi3/DOC/model/model.json \
 -df onnx \
--om models/onnx/weights
+-om models/onnx/weights.onnx
 ```
