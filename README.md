@@ -9,7 +9,7 @@ I would like to express my deepest gratitude for having pleasantly accepted his 
 His articles that were supposed to be used practically, not limited to logic alone, are wonderful.  
 However, I don't have the skills to read papers, nor do I have skills to read mathematical expressions.  
 I only want to verify the effectiveness of his wonderful article content in a practical range.  
-However, to be honest, I am not engaged in the work of making a program.  
+To be honest, I am not engaged in the work of making a program.  
 
 # Environment (example)
 1. Ubuntu 16.04
