@@ -393,4 +393,14 @@ X_train = np.array(X_train)
 X_train /= 255
 ```
 Data Augmentation as follows.  
-![18](media/18.png) 
+![18](media/18.png)  
+Points are as follows.  
+When moving the image in parallel, I specified the color to fill in the blanks.  
+It is necessary to adjust this as necessary.  
+```python
+fill_mode="constant",
+cval=180,
+```
+This time I want to detect color differences, so I am using regular Data Augmentation.  
+However, if you want to detect only the shape of the object, it may be better to run **[PCA Data Augmentation](https://qiita.com/shinmura0/items/f818bcbb92d5fff5279d#data-augmentation)**.  
+
