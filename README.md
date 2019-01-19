@@ -308,6 +308,7 @@ $ python3 main.py
 - **If "human face" is not appeared, the score will rise. (Abnormality)**
 - **Learning was executed with [CelebA](http://aidiary.hatenablog.com/entry/20180311/1520762446).**  
   
+**＜Test of Corei7 CPU Only / 11 FPS＞**
 ![15](media/15.gif)  
 **Youtube : https://youtu.be/p8BDwhF7y8w**  
 ### 10-3.Learning by original data set
