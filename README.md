@@ -271,3 +271,5 @@ DOC with RaspberryPi3 is coming soon.
   - Visual inspection of industrial products
   - Appearance inspection of bridges by drone **[here](http://www.tobu.co.jp/file/pdf/0f5fc3eafc73a1e18b62c9008c0385b4/newsletter_180413.pdf?date=20180413133524)**
   - Surveillance camera **[here](https://jpn.nec.com/press/201812/20181211_02.html)**
+## 10-1. How to use
+If you want to try it immediately, please try **[this (Face Detection)](https://github.com/shinmura0/OneClassAnomalyDetection-RaspberryPi3.git)**.
