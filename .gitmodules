@@ -1,0 +1,3 @@
+[submodule "OneClassAnomalyDetection-RaspberryPi3"]
+	path = OneClassAnomalyDetection-RaspberryPi3
+	url = https://github.com/shinmura0/OneClassAnomalyDetection-RaspberryPi3.git
