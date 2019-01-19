@@ -309,6 +309,7 @@ $ python3 main.py
 - **Learning was executed with [CelebA](http://aidiary.hatenablog.com/entry/20180311/1520762446).**  
   
 ![15](media/15.gif)  
+**Youtube : https://youtu.be/p8BDwhF7y8w**  
 ### 10-3.Learning by original data set
 For those who want to training models themselves, the technical contents are described below.  
 The overall flow is as shown in the figure below.  
