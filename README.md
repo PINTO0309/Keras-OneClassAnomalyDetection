@@ -434,3 +434,5 @@ It will be resized as follows.
 Before resizing on the left figure. <img src="https://latex.codecogs.com/gif.latex?(32\times32\times3)" />  
 After resizing the figure on the right. <img src="https://latex.codecogs.com/gif.latex?(96\times96\times3)" />  
 ![19](media/19.png)  
+### 10-8.Training
+Train according to **[Model building and learning](#7-3-model-building-and-learning)**.  
