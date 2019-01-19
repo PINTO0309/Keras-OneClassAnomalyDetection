@@ -503,7 +503,8 @@ $ netron -b [MODEL_FILE]
 ```
 2. Access http://localhost:8080 from the browser.  
 <img src="media/26.png" width=20%>  
-## 13. Convert Medel
+
+## 13. Model Convert
 ### 13-1. MMdnn
 ```bash
 $ sudo -H pip3 install mmdnn
