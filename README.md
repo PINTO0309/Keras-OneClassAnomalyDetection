@@ -403,4 +403,34 @@ cval=180,
 ```
 This time I want to detect color differences, so I am using regular Data Augmentation.  
 However, if you want to detect only the shape of the object, it may be better to run **[PCA Data Augmentation](https://qiita.com/shinmura0/items/f818bcbb92d5fff5279d#data-augmentation)**.  
+### 10-7.Generation of reference data
+In this case I will use color image, use CIFAR10 image as reference data.  
+```python
+from keras.datasets import cifar10
+from keras.utils import to_categorical
 
+# dataset
+(x_ref, y_ref), (x_test, y_test) = cifar10.load_data()
+x_ref = x_ref.astype('float32') / 255
+
+#6,000 randomly extracted from ref data
+number = np.random.choice(np.arange(0,x_ref.shape[0]),6000,replace=False)
+
+x, y = [], []
+
+x_ref_shape = x_ref.shape
+
+for i in number:
+    temp = x_ref[i]
+    x.append(temp.reshape((x_ref_shape[1:])))
+    y.append(y_ref[i])
+
+x_ref = np.array(x)
+y_ref = to_categorical(y)
+
+X_ref = resize(x_ref)
+```
+It will be resized as follows.  
+Before resizing on the left figure. <img src="https://latex.codecogs.com/gif.latex?(32\times32\times3)" />  
+After resizing the figure on the right. <img src="https://latex.codecogs.com/gif.latex?(96\times96\times3)" />  
+![19](media/19.png)  
