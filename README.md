@@ -306,7 +306,7 @@ For those who want to training models themselves, the technical contents are des
 The overall flow is as shown in the figure below.  
 ![16](media/16.png)  
 Since the calculation load is not high, it is possible to complete all processes with RaspberryPi.  
-However, in order to download CIFAR 10, it needs to be processed by a terminal connected to the network.  
+However, in order to download CIFAR10, it needs to be processed by a terminal connected to the network.  
 ### 10-4.Acquisition of learning image data
 First, you take pictures for learning.  
 Please take a picture along the following notes.  
@@ -456,3 +456,9 @@ np.savetxt(model_path + "train.csv",train[:train_num],delimiter=",")
 The "model" folder contains three files "model.json", "weights.h5" and "train.csv".  
 **`train_num = 1000 # number of training data`** is an acceleration parameter of LOF.  
 ### 10-9.Execution of inference with RaspberryPi
+Please copy the "model" folder right under the "DOC" folder of RaspberryPi.  
+Please execute **`main.py`**.  
+```bash
+$ cd OneClassAnomalyDetection-RaspberryPi3/DOC
+$ python3 main.py
+```
