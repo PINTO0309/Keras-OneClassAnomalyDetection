@@ -535,3 +535,13 @@ optional arguments:
   --dump_tag {SERVING,TRAINING}
                         Tensorflow model dump type
 ```
+### 13-2. Keras -> Tensorflow
+```bash
+$ mmconvert \
+-sf keras \
+-iw OneClassAnomalyDetection-RaspberryPi3/DOC/model/weights.h5 \
+-in OneClassAnomalyDetection-RaspberryPi3/DOC/model/model.json \
+-df tensorflow \
+-om models/tensorflow \
+--dump_tag SERVING
+```
