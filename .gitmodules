@@ -1,3 +1,6 @@
 [submodule "OneClassAnomalyDetection-RaspberryPi3"]
 	path = OneClassAnomalyDetection-RaspberryPi3
 	url = https://github.com/shinmura0/OneClassAnomalyDetection-RaspberryPi3.git
+[submodule "keras2tensorflow"]
+	path = keras2tensorflow
+	url = https://github.com/amir-abdi/keras_to_tensorflow.git
