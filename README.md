@@ -488,3 +488,9 @@ Unlike neural networks, LOF changes the inference time greatly depending on the 
 The figure below shows the relationship between the number of LOF learning data and inference time, using sneaker data.  
 ![25](media/25.png)  
 Since LOF stores learning data and detects abnormality just like the k-nearest neighbor method, as the number of learning data increases, inference time increases accidentally.  
+What I would like to pay attention to here is that the transition of AUC is saturated when the learning data is 1000 pieces.  
+In other words, even if there are more than 1000 training data, performance will not be affected, only inference time will increase.  
+So, I am constructing LOF using 1000 learning data this time.  
+As a result, performance and reasoning speed can be incorporated in a well-balanced manner, reducing the time by 180 msec or more.  
+As a result, the inference time of DOC + LOF is about 200 msec (5 FPS) with RaspberryPi alone.  
+If you use the GPU, it may run at 20 msec (50 FPS).  
