@@ -298,7 +298,9 @@ $ python3 main.py
 - **When operating for a long time, please operate while cooling.**
 - **If "human face" appears, the score falls. (Normal)**
 - **If "human face" is not appeared, the score will rise. (Abnormality)**
-- **Learning was executed with [CelebA](http://aidiary.hatenablog.com/entry/20180311/1520762446).**
+- **Learning was executed with [CelebA](http://aidiary.hatenablog.com/entry/20180311/1520762446).**  
+  
+![15](media/15.gif)  
 ### 10-3.Learning by original data set
 For those who want to training models themselves, the technical contents are described below.  
 The overall flow is as shown in the figure below.  
