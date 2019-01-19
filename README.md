@@ -9,6 +9,7 @@ I would like to express my deepest gratitude for having pleasantly accepted his 
 His articles that were supposed to be used practically, not limited to logic alone, are wonderful.  
 However, I don't have the skills to read papers, nor do I have skills to read mathematical expressions.  
 I only want to verify the effectiveness of his wonderful article content in a practical range.  
+To be honest, I am not engaged in the work of making a program.  
 
 # Environment (example)
 1. Ubuntu 16.04
@@ -496,4 +497,60 @@ As a result, performance and reasoning speed can be incorporated in a well-balan
 As a result, the inference time of DOC + LOF is about 200 msec (5 FPS) with RaspberryPi alone.  
 If you use the GPU, it may run at 20 msec (50 FPS).  
 ## 12. Structure of the model
+1. Execute below.  
+```bash
+$ sudo -H pip3 install netron
+$ netron -b [MODEL_FILE]
+```
+2. Access http://localhost:8080 from the browser.  
 <img src="media/26.png" width=20%>  
+
+## 13. Model Convert
+### 13-1. MMdnn
+```bash
+$ sudo -H pip3 install -U git+https://github.com/Microsoft/MMdnn.git@master
+$ sudo -H pip3 install onnx-tf
+$ mmconvert -h
+usage: mmconvert [-h]
+                 [--srcFramework {caffe,caffe2,cntk,mxnet,keras,tensorflow,tf,pytorch}]
+                 [--inputWeight INPUTWEIGHT] [--inputNetwork INPUTNETWORK]
+                 --dstFramework
+                 {caffe,caffe2,cntk,mxnet,keras,tensorflow,coreml,pytorch,onnx}
+                 --outputModel OUTPUTMODEL [--dump_tag {SERVING,TRAINING}]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --srcFramework {caffe,caffe2,cntk,mxnet,keras,tensorflow,tf,pytorch}, -sf {caffe,caffe2,cntk,mxnet,keras,tensorflow,tf,pytorch}
+                        Source toolkit name of the model to be converted.
+  --inputWeight INPUTWEIGHT, -iw INPUTWEIGHT
+                        Path to the model weights file of the external tool
+                        (e.g caffe weights proto binary, keras h5 binary
+  --inputNetwork INPUTNETWORK, -in INPUTNETWORK
+                        Path to the model network file of the external tool
+                        (e.g caffe prototxt, keras json
+  --dstFramework {caffe,caffe2,cntk,mxnet,keras,tensorflow,coreml,pytorch,onnx}, -df {caffe,caffe2,cntk,mxnet,keras,tensorflow,coreml,pytorch,onnx}
+                        Format of model at srcModelPath (default is to auto-
+                        detect).
+  --outputModel OUTPUTMODEL, -om OUTPUTMODEL
+                        Path to save the destination model
+  --dump_tag {SERVING,TRAINING}
+                        Tensorflow model dump type
+```
+### 13-2. Keras -> Tensorflow
+```bash
+$ mmconvert \
+-sf keras \
+-iw OneClassAnomalyDetection-RaspberryPi3/DOC/model/weights.h5 \
+-in OneClassAnomalyDetection-RaspberryPi3/DOC/model/model.json \
+-df tensorflow \
+-om models/tensorflow/weights
+```
+### 13-3. Keras -> ONNX
+```bash
+$ mmconvert \
+-sf keras \
+-iw OneClassAnomalyDetection-RaspberryPi3/DOC/model/weights.h5 \
+-in OneClassAnomalyDetection-RaspberryPi3/DOC/model/model.json \
+-df onnx \
+-om models/onnx/weights.onnx
+```
