@@ -282,6 +282,7 @@ If you want to try it immediately, please try **[this (Face Detection)](https://
 1.Execute below.
 ```bash
 $ git clone https://github.com/PINTO0309/Keras-OneClassAnomalyDetection.git
+$ git submodule update
 ```
 2.Connect USB Camera to RaspberryPi.
 3.Execute below.
