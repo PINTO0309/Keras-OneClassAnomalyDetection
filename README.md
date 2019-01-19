@@ -506,7 +506,7 @@ $ sudo -H pip3 install netron
 $ netron -b [MODEL_FILE]
 ```
 2. Access http://localhost:8080 from the browser.  
-<img src="media/26.png" width=20%><img src="media/27.png" width=20%><img src="media/28.png" width=45%>  
+<img src="media/26.png" width=20%><img src="media/27.png" width=20%><img src="media/28.png" width=45%><img src="media/29.png" width=10%>  
 
 ## 13. Model Convert
 ### 13-1. MMdnn
