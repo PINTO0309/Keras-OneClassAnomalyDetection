@@ -746,3 +746,5 @@ $ mmconvert \
 ## 14. Issue
 **https://software.intel.com/en-us/articles/OpenVINO-ModelOptimizer#FAQ76**  
 **https://software.intel.com/en-us/forums/computer-vision/topic/802689**  
+  
+**[OpenVINO Official FAQ](https://software.intel.com/en-us/articles/OpenVINO-ModelOptimizer#inpage-nav-6)**  
