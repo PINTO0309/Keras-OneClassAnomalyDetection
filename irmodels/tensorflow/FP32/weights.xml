@@ -2103,25 +2103,6 @@
 				<biases offset="2708512" size="5120"/>
 			</blobs>
 		</layer>
-		<layer id="97" name="out_relu/Relu6" precision="FP32" type="Clamp">
-			<data max="6" min="0"/>
-			<input>
-				<port id="0">
-					<dim>1</dim>
-					<dim>1280</dim>
-					<dim>3</dim>
-					<dim>3</dim>
-				</port>
-			</input>
-			<output>
-				<port id="1">
-					<dim>1</dim>
-					<dim>1280</dim>
-					<dim>3</dim>
-					<dim>3</dim>
-				</port>
-			</output>
-		</layer>
 	</layers>
 	<edges>
 		<edge from-layer="0" from-port="0" to-layer="1" to-port="0"/>
@@ -2230,7 +2211,6 @@
 		<edge from-layer="93" from-port="3" to-layer="94" to-port="0"/>
 		<edge from-layer="94" from-port="1" to-layer="95" to-port="0"/>
 		<edge from-layer="95" from-port="3" to-layer="96" to-port="0"/>
-		<edge from-layer="96" from-port="3" to-layer="97" to-port="0"/>
 	</edges>
 	<meta_data>
 		<MO_version value="1.5.12.49d067a0"/>
@@ -2251,7 +2231,7 @@
 			<mean_values value="()"/>
 			<move_to_preprocess value="False"/>
 			<offload_unsupported_operations_to_tf value="False"/>
-			<output value="out_relu/Relu6"/>
+			<output value="Conv_1_bn/FusedBatchNorm_1"/>
 			<output_dir value="DIR"/>
 			<reverse_input_channels value="False"/>
 			<scale_values value="()"/>
