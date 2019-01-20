@@ -113,10 +113,6 @@
 		<IR id="27" name="block_4_add/add" out_port_id="2"/>
 	</map>
 	<map>
-		<framework name="block_5_expand_BN/FusedBatchNorm_1" out_port_id="0"/>
-		<IR id="28" name="block_5_expand/convolution" out_port_id="3"/>
-	</map>
-	<map>
 		<framework name="block_5_expand_relu/Relu6" out_port_id="0"/>
 		<IR id="29" name="block_5_expand_relu/Relu6" out_port_id="1"/>
 	</map>
@@ -131,10 +127,6 @@
 	<map>
 		<framework name="block_5_project_BN/FusedBatchNorm_1" out_port_id="0"/>
 		<IR id="32" name="block_5_project/convolution" out_port_id="3"/>
-	</map>
-	<map>
-		<framework name="block_5_add/add" out_port_id="0"/>
-		<IR id="33" name="block_5_add/add" out_port_id="2"/>
 	</map>
 	<map>
 		<framework name="block_6_expand_BN/FusedBatchNorm_1" out_port_id="0"/>
@@ -161,6 +153,10 @@
 		<IR id="39" name="block_7_expand/convolution" out_port_id="3"/>
 	</map>
 	<map>
+		<framework name="block_7_expand_relu/Relu6" out_port_id="0"/>
+		<IR id="40" name="block_7_expand_relu/Relu6" out_port_id="1"/>
+	</map>
+	<map>
 		<framework name="block_7_depthwise_BN/FusedBatchNorm_1" out_port_id="0"/>
 		<IR id="41" name="block_7_depthwise/depthwise" out_port_id="3"/>
 	</map>
@@ -169,8 +165,16 @@
 		<IR id="42" name="block_7_depthwise_relu/Relu6" out_port_id="1"/>
 	</map>
 	<map>
+		<framework name="block_7_project_BN/FusedBatchNorm_1" out_port_id="0"/>
+		<IR id="43" name="block_7_project/convolution" out_port_id="3"/>
+	</map>
+	<map>
 		<framework name="block_7_add/add" out_port_id="0"/>
 		<IR id="44" name="block_7_add/add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="block_8_expand_BN/FusedBatchNorm_1" out_port_id="0"/>
+		<IR id="45" name="block_8_expand/convolution" out_port_id="3"/>
 	</map>
 	<map>
 		<framework name="block_8_expand_relu/Relu6" out_port_id="0"/>
@@ -221,12 +225,12 @@
 		<IR id="57" name="block_10_expand/convolution" out_port_id="3"/>
 	</map>
 	<map>
-		<framework name="block_10_expand_relu/Relu6" out_port_id="0"/>
-		<IR id="58" name="block_10_expand_relu/Relu6" out_port_id="1"/>
-	</map>
-	<map>
 		<framework name="block_10_depthwise_BN/FusedBatchNorm_1" out_port_id="0"/>
 		<IR id="59" name="block_10_depthwise/depthwise" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="block_10_depthwise_relu/Relu6" out_port_id="0"/>
+		<IR id="60" name="block_10_depthwise_relu/Relu6" out_port_id="1"/>
 	</map>
 	<map>
 		<framework name="block_10_project_BN/FusedBatchNorm_1" out_port_id="0"/>
@@ -317,6 +321,10 @@
 		<IR id="82" name="block_14_depthwise_relu/Relu6" out_port_id="1"/>
 	</map>
 	<map>
+		<framework name="block_14_project_BN/FusedBatchNorm_1" out_port_id="0"/>
+		<IR id="83" name="block_14_project/convolution" out_port_id="3"/>
+	</map>
+	<map>
 		<framework name="block_14_add/add" out_port_id="0"/>
 		<IR id="84" name="block_14_add/add" out_port_id="2"/>
 	</map>
@@ -357,6 +365,10 @@
 		<IR id="93" name="block_16_depthwise/depthwise" out_port_id="3"/>
 	</map>
 	<map>
+		<framework name="block_16_depthwise_relu/Relu6" out_port_id="0"/>
+		<IR id="94" name="block_16_depthwise_relu/Relu6" out_port_id="1"/>
+	</map>
+	<map>
 		<framework name="block_16_project_BN/FusedBatchNorm_1" out_port_id="0"/>
 		<IR id="95" name="block_16_project/convolution" out_port_id="3"/>
 	</map>
@@ -365,27 +377,23 @@
 		<IR id="96" name="Conv_1/convolution" out_port_id="3"/>
 	</map>
 	<map>
-		<framework name="block_7_expand_relu/Relu6" out_port_id="0"/>
-		<IR id="40" name="block_7_expand_relu/Relu6" out_port_id="1"/>
+		<framework name="out_relu/Relu6" out_port_id="0"/>
+		<IR id="97" name="out_relu/Relu6" out_port_id="1"/>
 	</map>
 	<map>
-		<framework name="block_7_project_BN/FusedBatchNorm_1" out_port_id="0"/>
-		<IR id="43" name="block_7_project/convolution" out_port_id="3"/>
+		<framework name="global_average_pooling2d_1/Mean" out_port_id="0"/>
+		<IR id="99" name="Reshape_" out_port_id="1"/>
 	</map>
 	<map>
-		<framework name="block_16_depthwise_relu/Relu6" out_port_id="0"/>
-		<IR id="94" name="block_16_depthwise_relu/Relu6" out_port_id="1"/>
+		<framework name="block_5_expand_BN/FusedBatchNorm_1" out_port_id="0"/>
+		<IR id="28" name="block_5_expand/convolution" out_port_id="3"/>
 	</map>
 	<map>
-		<framework name="block_10_depthwise_relu/Relu6" out_port_id="0"/>
-		<IR id="60" name="block_10_depthwise_relu/Relu6" out_port_id="1"/>
+		<framework name="block_5_add/add" out_port_id="0"/>
+		<IR id="33" name="block_5_add/add" out_port_id="2"/>
 	</map>
 	<map>
-		<framework name="block_14_project_BN/FusedBatchNorm_1" out_port_id="0"/>
-		<IR id="83" name="block_14_project/convolution" out_port_id="3"/>
-	</map>
-	<map>
-		<framework name="block_8_expand_BN/FusedBatchNorm_1" out_port_id="0"/>
-		<IR id="45" name="block_8_expand/convolution" out_port_id="3"/>
+		<framework name="block_10_expand_relu/Relu6" out_port_id="0"/>
+		<IR id="58" name="block_10_expand_relu/Relu6" out_port_id="1"/>
 	</map>
 </mapping>
