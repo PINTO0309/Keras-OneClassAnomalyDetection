@@ -32,6 +32,21 @@ To be honest, I am not engaged in the work of making a program.
 14. OpenVINO R5 2018.5.445
 
 # Translating shinmura0's article
+## 0. Table of contents
+1. **[Introduction](#1-introduction)**
+2. **[Overview](#2-overview)**
+3. **[Preparing data](#3-preparing-data)**
+4. **[Preparing the model](#4-preparing-the-model)**
+5. **[Learning phase](#5-learning-phase)**
+6. **[Test phase](#6-test-phase)**
+7. **[Implementation by Keras](#7-implementation-by-keras)**
+8. **[Result](#8-result)**
+9. **[Visualization by Keras](#9-visualization-by-keras)**
+10. **[Implementation by RaspberryPi](#10-implementation-by-raspberrypi)**
+11. **[Acceleration of LOF](#11-acceleration-of-lof)**
+12. **[Structure of the model](#12-structure-of-the-model)**
+13. **[Model Convert](#13-model-convert)**
+
 ## 1. Introduction
 There are many methods such as methods using **"[Implemented ALOCC for detecting anomalies by deep learning (GAN) - Qiia - kzkadc](https://qiita.com/kzkadc/items/334c3d85c2acab38f105)"** and methods using **"[Detection of Video Anomalies Using Convolutional Autoencoders and One-Class Support Vector Machines (AutoEncoder)](http://cbic2017.org/papers/cbic-paper-49.pdf)"** for image anomaly detection using deep learning.  
 Here is an article on detecting abnormality of images using "Variational Autoencoder".  
