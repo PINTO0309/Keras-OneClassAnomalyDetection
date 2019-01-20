@@ -546,12 +546,10 @@ optional arguments:
 ```
 ### 13-2. Keras -> Tensorflow
 ```bash
-$ mmconvert \
--sf keras \
--iw OneClassAnomalyDetection-RaspberryPi3/DOC/model/weights.h5 \
--in OneClassAnomalyDetection-RaspberryPi3/DOC/model/model.json \
--df tensorflow \
--om models/tensorflow/weights
+$ python3 keras2tensorflow/keras_to_tensorflow.py \
+--input_model="OneClassAnomalyDetection-RaspberryPi3/DOC/model/weights.h5" \
+--input_model_json="OneClassAnomalyDetection-RaspberryPi3/DOC/model/model.json" \
+--output_model="models/tensorflow/weights.pb"
 ```
 ### 13-3. Keras -> ONNX
 ```bash
