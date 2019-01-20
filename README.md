@@ -556,7 +556,7 @@ $ sudo python3 /opt/intel/computer_vision_sdk/deployment_tools/model_optimizer/m
 --input_model models/tensorflow/weights.pb \
 --output_dir irmodels/tensorflow/FP16 \
 --input input_1 \
---output out_relu/Relu6 \
+--output Conv_1_bn/FusedBatchNorm_1 \
 --data_type FP16 \
 --batch 1
 ```
@@ -569,7 +569,7 @@ Common parameters:
 	- Log level: 	ERROR
 	- Batch: 	1
 	- Input layers: 	input_1
-	- Output layers: 	out_relu/Relu6
+	- Output layers: 	Conv_1_bn/FusedBatchNorm_1
 	- Input shapes: 	Not specified, inherited from the model
 	- Mean values: 	Not specified
 	- Scale values: 	Not specified
@@ -596,7 +596,7 @@ Model Optimizer version: 	1.5.12.49d067a0
 [ SUCCESS ] Generated IR model.
 [ SUCCESS ] XML file: /home/xxxx/git/Keras-OneClassAnomalyDetection/irmodels/tensorflow/FP16/weights.xml
 [ SUCCESS ] BIN file: /home/xxxx/git/Keras-OneClassAnomalyDetection/irmodels/tensorflow/FP16/weights.bin
-[ SUCCESS ] Total execution time: 5.40 seconds.
+[ SUCCESS ] Total execution time: 5.31 seconds. 
 ```
 ### 13-3. Keras -> ONNX
 ```bash
