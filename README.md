@@ -551,6 +551,53 @@ $ python3 keras2tensorflow/keras_to_tensorflow.py \
 --input_model_json="OneClassAnomalyDetection-RaspberryPi3/DOC/model/model.json" \
 --output_model="models/tensorflow/weights.pb"
 ```
+```bash
+sudo python3 /opt/intel/computer_vision_sdk/deployment_tools/model_optimizer/mo_tf.py \
+--input_model models/tensorflow/weights.pb \
+--output_dir irmodels/tensorflow/FP16 \
+--input input_1 \
+--output out_relu/Relu6 \
+--data_type FP16 \
+--batch 1
+```
+```txt
+Model Optimizer arguments:
+Common parameters:
+	- Path to the Input Model: 	/home/xxxx/git/Keras-OneClassAnomalyDetection/models/tensorflow/weights.pb
+	- Path for generated IR: 	/home/xxxx/git/Keras-OneClassAnomalyDetection/irmodels/tensorflow/FP16
+	- IR output name: 	weights
+	- Log level: 	ERROR
+	- Batch: 	1
+	- Input layers: 	input_1
+	- Output layers: 	out_relu/Relu6
+	- Input shapes: 	Not specified, inherited from the model
+	- Mean values: 	Not specified
+	- Scale values: 	Not specified
+	- Scale factor: 	Not specified
+	- Precision of IR: 	FP16
+	- Enable fusing: 	True
+	- Enable grouped convolutions fusing: 	True
+	- Move mean values to preprocess section: 	False
+	- Reverse input channels: 	False
+TensorFlow specific parameters:
+	- Input model in text protobuf format: 	False
+	- Offload unsupported operations: 	False
+	- Path to model dump for TensorBoard: 	None
+	- List of shared libraries with TensorFlow custom layers implementation: 	None
+	- Update the configuration file with input/output node names: 	None
+	- Use configuration file used to generate the model with Object Detection API: 	None
+	- Operations to offload: 	None
+	- Patterns to offload: 	None
+	- Use the config file: 	None
+Model Optimizer version: 	1.5.12.49d067a0
+/usr/local/lib/python3.5/dist-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+
+[ SUCCESS ] Generated IR model.
+[ SUCCESS ] XML file: /home/xxxx/git/Keras-OneClassAnomalyDetection/irmodels/tensorflow/FP16/weights.xml
+[ SUCCESS ] BIN file: /home/xxxx/git/Keras-OneClassAnomalyDetection/irmodels/tensorflow/FP16/weights.bin
+[ SUCCESS ] Total execution time: 5.40 seconds.
+```
 ### 13-3. Keras -> ONNX
 ```bash
 $ mmconvert \
