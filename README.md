@@ -594,7 +594,7 @@ $ sudo python3 /opt/intel/computer_vision_sdk/deployment_tools/model_optimizer/m
 --input_model models/tensorflow/weights.pb \
 --output_dir irmodels/tensorflow/FP16 \
 --input input_1 \
---output Conv_1_bn/FusedBatchNorm_1 \
+--output global_average_pooling2d_1/Mean \
 --data_type FP16 \
 --batch 1
 ```
