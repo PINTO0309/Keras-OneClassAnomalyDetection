@@ -286,7 +286,7 @@ DOC with RaspberryPi3 is coming soon.
 3. Keras 2.2.4
 4. OpenCV 4.0.1-openvino
 ### 10-2. How to use
-If you want to try it immediately, please try **[this (Face Detection)](https://github.com/shinmura0/OneClassAnomalyDetection-RaspberryPi3/tree/a98388d3795d046e3ced059df130191a9ebbff0d)**.
+If you want to try it immediately, please try Face Detection.
 
 1.Execute below.  
 ```bash
