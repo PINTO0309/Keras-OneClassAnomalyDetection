@@ -165,7 +165,6 @@ The learning rate seems to be <img src="https://latex.codecogs.com/gif.latex?5\t
 
 ## 7. Implementation by Keras
 The learned model uses lightweight MobileNetV2.  
-In the future, I want to implement it with RaspberryPi3.  
 
 ### 7-1. Load data
 Data use this time is Fashion-MNIST.  
