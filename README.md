@@ -69,6 +69,7 @@ To be honest, I am not engaged in the work of making a program.
   13-3. **[Keras -> ONNX -> OpenVINO](#13-3-keras---onnx---openvino)**  
   13-4. **[Keras -> Caffe -> OpenVINO](#13-4-keras---caffe---openvino)**  
   13-5. **[Keras -> PyTorch](#13-5-keras---pytorch)**  
+14. **[Issue](#14-issue)**  
 
 ## 1. Introduction
 There are many methods such as methods using **"[Implemented ALOCC for detecting anomalies by deep learning (GAN) - Qiia - kzkadc](https://qiita.com/kzkadc/items/334c3d85c2acab38f105)"** and methods using **"[Detection of Video Anomalies Using Convolutional Autoencoders and One-Class Support Vector Machines (AutoEncoder)](http://cbic2017.org/papers/cbic-paper-49.pdf)"** for image anomaly detection using deep learning.  
@@ -742,3 +743,6 @@ $ mmconvert \
 -df pytorch \
 -om models/pytorch/weights.pth
 ```
+## 14. Issue
+**https://software.intel.com/en-us/articles/OpenVINO-ModelOptimizer#FAQ76**
+**https://software.intel.com/en-us/forums/computer-vision/topic/802689**
