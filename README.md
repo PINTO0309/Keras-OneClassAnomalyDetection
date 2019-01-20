@@ -28,6 +28,7 @@ To be honest, I am not engaged in the work of making a program.
 11. PIL 5.3.0
 12. OpenCV 4.0.1-openvino
 13. sklearn 0.20.0
+14. OpenVINO R5 2018.5.445
 
 # Translating shinmura0's article
 ## 1. Introduction
