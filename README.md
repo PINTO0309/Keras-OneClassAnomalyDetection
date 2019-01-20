@@ -545,7 +545,7 @@ optional arguments:
   --dump_tag {SERVING,TRAINING}
                         Tensorflow model dump type
 ```
-### 13-2. Keras -> Tensorflow
+### 13-2. Keras -> Tensorflow -> OpenVINO
 ```bash
 $ python3 keras2tensorflow/keras_to_tensorflow.py \
 --input_model="OneClassAnomalyDetection-RaspberryPi3/DOC/model/weights.h5" \
@@ -599,7 +599,7 @@ Model Optimizer version: 	1.5.12.49d067a0
 [ SUCCESS ] BIN file: /home/xxxx/git/Keras-OneClassAnomalyDetection/irmodels/tensorflow/FP16/weights.bin
 [ SUCCESS ] Total execution time: 5.31 seconds. 
 ```
-### 13-3. Keras -> ONNX
+### 13-3. Keras -> ONNX -> OpenVINO
 ```bash
 $ mmconvert \
 -sf keras \
@@ -648,7 +648,7 @@ Model Optimizer version: 	1.5.12.49d067a0
 [ ERROR ]  Stopped shape/value propagation at "Conv1_relu" node. 
  For more information please refer to Model Optimizer FAQ (<INSTALL_DIR>/deployment_tools/documentation/docs/MO_FAQ.html), question #38. 
 ```
-### 13-4. Keras -> Caffe
+### 13-4. Keras -> Caffe -> OpenVINO
 ```bash
 $ mmconvert \
 -sf keras \
