@@ -560,6 +560,14 @@ $ mmconvert \
 -df onnx \
 -om models/onnx/weights.onnx
 ```
+```bash
+$ sudo python3 /opt/intel/computer_vision_sdk/deployment_tools/model_optimizer/mo.py \
+--framework onnx \
+--input_model models/onnx/weights.onnx \
+--output_dir irmodels/onnx/FP16 \
+--data_type FP16 \
+--batch 1
+```
 ### 13-4. Keras -> Caffe
 ```bash
 $ mmconvert \
