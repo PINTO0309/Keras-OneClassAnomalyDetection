@@ -568,7 +568,7 @@ $ sudo python3 /opt/intel/computer_vision_sdk/deployment_tools/model_optimizer/m
 --data_type FP16 \
 --batch 1
 ```
-```bash
+```txt
 Model Optimizer arguments:
 Common parameters:
 	- Path to the Input Model: 	/home/xxxx/git/Keras-OneClassAnomalyDetection/models/onnx/weights.onnx
@@ -618,7 +618,7 @@ $ sudo python3 /opt/intel/computer_vision_sdk/deployment_tools/model_optimizer/m
 --data_type FP16 \
 --batch 1
 ```
-```bash
+```txt
 Model Optimizer arguments:
 Common parameters:
 	- Path to the Input Model: 	/home/xxxx/git/Keras-OneClassAnomalyDetection/models/caffe/weights.caffemodel
