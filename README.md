@@ -552,7 +552,7 @@ $ python3 keras2tensorflow/keras_to_tensorflow.py \
 --output_model="models/tensorflow/weights.pb"
 ```
 ```bash
-sudo python3 /opt/intel/computer_vision_sdk/deployment_tools/model_optimizer/mo_tf.py \
+$ sudo python3 /opt/intel/computer_vision_sdk/deployment_tools/model_optimizer/mo_tf.py \
 --input_model models/tensorflow/weights.pb \
 --output_dir irmodels/tensorflow/FP16 \
 --input input_1 \
