@@ -744,5 +744,5 @@ $ mmconvert \
 -om models/pytorch/weights.pth
 ```
 ## 14. Issue
-**https://software.intel.com/en-us/articles/OpenVINO-ModelOptimizer#FAQ76**
-**https://software.intel.com/en-us/forums/computer-vision/topic/802689**
+**https://software.intel.com/en-us/articles/OpenVINO-ModelOptimizer#FAQ76**  
+**https://software.intel.com/en-us/forums/computer-vision/topic/802689**  
