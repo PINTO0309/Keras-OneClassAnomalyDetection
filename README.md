@@ -569,6 +569,15 @@ $ mmconvert \
 -df caffe \
 -om models/caffe/weights
 ```
+```bash
+$ sudo python3 /opt/intel/computer_vision_sdk/deployment_tools/model_optimizer/mo.py \
+--framework caffe \
+--input_model models/caffe/weights.caffemodel \
+--input_proto models/caffe/weights.prototxt \
+--output_dir irmodels/caffe/FP16 \
+--data_type FP16 \
+--batch 1
+```
 ### 13-5. Keras -> PyTorch
 ```bash
 $ mmconvert \
