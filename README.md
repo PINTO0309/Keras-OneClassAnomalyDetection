@@ -568,6 +568,38 @@ $ sudo python3 /opt/intel/computer_vision_sdk/deployment_tools/model_optimizer/m
 --data_type FP16 \
 --batch 1
 ```
+```bash
+Model Optimizer arguments:
+Common parameters:
+	- Path to the Input Model: 	/home/xxxx/git/Keras-OneClassAnomalyDetection/models/onnx/weights.onnx
+	- Path for generated IR: 	/home/xxxx/git/Keras-OneClassAnomalyDetection/irmodels/onnx/FP16
+	- IR output name: 	weights
+	- Log level: 	ERROR
+	- Batch: 	1
+	- Input layers: 	Not specified, inherited from the model
+	- Output layers: 	Not specified, inherited from the model
+	- Input shapes: 	Not specified, inherited from the model
+	- Mean values: 	Not specified
+	- Scale values: 	Not specified
+	- Scale factor: 	Not specified
+	- Precision of IR: 	FP16
+	- Enable fusing: 	True
+	- Enable grouped convolutions fusing: 	True
+	- Move mean values to preprocess section: 	False
+	- Reverse input channels: 	False
+ONNX specific parameters:
+Model Optimizer version: 	1.5.12.49d067a0
+[ ERROR ]  Cannot infer shapes or values for node "Conv1_relu".
+[ ERROR ]  There is no registered "infer" function for node "Conv1_relu" with op = "Clip". Please implement this function in the extensions. 
+ For more information please refer to Model Optimizer FAQ (<INSTALL_DIR>/deployment_tools/documentation/docs/MO_FAQ.html), question #37. 
+[ ERROR ]  
+[ ERROR ]  It can happen due to bug in custom shape infer function <UNKNOWN>.
+[ ERROR ]  Or because the node inputs have incorrect values/shapes.
+[ ERROR ]  Or because input shapes are incorrect (embedded to the model or passed via --input_shape).
+[ ERROR ]  Run Model Optimizer with --log_level=DEBUG for more information.
+[ ERROR ]  Stopped shape/value propagation at "Conv1_relu" node. 
+ For more information please refer to Model Optimizer FAQ (<INSTALL_DIR>/deployment_tools/documentation/docs/MO_FAQ.html), question #38. 
+```
 ### 13-4. Keras -> Caffe
 ```bash
 $ mmconvert \
@@ -585,6 +617,36 @@ $ sudo python3 /opt/intel/computer_vision_sdk/deployment_tools/model_optimizer/m
 --output_dir irmodels/caffe/FP16 \
 --data_type FP16 \
 --batch 1
+```
+```bash
+Model Optimizer arguments:
+Common parameters:
+	- Path to the Input Model: 	/home/xxxx/git/Keras-OneClassAnomalyDetection/models/caffe/weights.caffemodel
+	- Path for generated IR: 	/home/xxxx/git/Keras-OneClassAnomalyDetection/irmodels/caffe/FP16
+	- IR output name: 	weights
+	- Log level: 	ERROR
+	- Batch: 	1
+	- Input layers: 	Not specified, inherited from the model
+	- Output layers: 	Not specified, inherited from the model
+	- Input shapes: 	Not specified, inherited from the model
+	- Mean values: 	Not specified
+	- Scale values: 	Not specified
+	- Scale factor: 	Not specified
+	- Precision of IR: 	FP16
+	- Enable fusing: 	True
+	- Enable grouped convolutions fusing: 	True
+	- Move mean values to preprocess section: 	False
+	- Reverse input channels: 	False
+Caffe specific parameters:
+	- Enable resnet optimization: 	True
+	- Path to the Input prototxt: 	/home/xxxx/git/Keras-OneClassAnomalyDetection/models/caffe/weights.prototxt
+	- Path to CustomLayersMapping.xml: 	Default
+	- Path to a mean file: 	Not specified
+	- Offsets for a mean file: 	Not specified
+Model Optimizer version: 	1.5.12.49d067a0
+[ ERROR ]  Unexpected exception happened during extracting attributes for node block_14_depthwise_BN.
+Original exception message: Found custom layer "DummyData2". Model Optimizer does not support this layer. Please, implement extension. 
+ For more information please refer to Model Optimizer FAQ (<INSTALL_DIR>/deployment_tools/documentation/docs/MO_FAQ.html), question #45.
 ```
 ### 13-5. Keras -> PyTorch
 ```bash
