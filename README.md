@@ -608,7 +608,7 @@ Common parameters:
 	- Log level: 	ERROR
 	- Batch: 	1
 	- Input layers: 	input_1
-	- Output layers: 	Conv_1_bn/FusedBatchNorm_1
+	- Output layers: 	global_average_pooling2d_1/Mean
 	- Input shapes: 	Not specified, inherited from the model
 	- Mean values: 	Not specified
 	- Scale values: 	Not specified
