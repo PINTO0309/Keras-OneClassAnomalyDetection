@@ -2103,6 +2103,61 @@
 				<biases offset="2708512" size="5120"/>
 			</blobs>
 		</layer>
+		<layer id="97" name="out_relu/Relu6" precision="FP32" type="Clamp">
+			<data max="6" min="0"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>1280</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1">
+					<dim>1</dim>
+					<dim>1280</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="98" name="global_average_pooling2d_1/Mean" precision="FP32" type="Pooling">
+			<data exclude-pad="true" kernel="3,3" pads_begin="0,0" pads_end="0,0" pool-method="avg" rounding-type="ceil" strides="1,1"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>1280</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1">
+					<dim>1</dim>
+					<dim>1280</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="99" name="Reshape_" precision="FP32" type="Reshape">
+			<data dim="1,1280"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>1280</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1">
+					<dim>1</dim>
+					<dim>1280</dim>
+				</port>
+			</output>
+		</layer>
 	</layers>
 	<edges>
 		<edge from-layer="0" from-port="0" to-layer="1" to-port="0"/>
@@ -2211,6 +2266,9 @@
 		<edge from-layer="93" from-port="3" to-layer="94" to-port="0"/>
 		<edge from-layer="94" from-port="1" to-layer="95" to-port="0"/>
 		<edge from-layer="95" from-port="3" to-layer="96" to-port="0"/>
+		<edge from-layer="96" from-port="3" to-layer="97" to-port="0"/>
+		<edge from-layer="97" from-port="1" to-layer="98" to-port="0"/>
+		<edge from-layer="98" from-port="1" to-layer="99" to-port="0"/>
 	</edges>
 	<meta_data>
 		<MO_version value="1.5.12.49d067a0"/>
@@ -2227,11 +2285,11 @@
 			<input value="input_1"/>
 			<input_model value="DIR/weights.pb"/>
 			<input_model_is_text value="False"/>
-			<log_level value="ERROR"/>
+			<log_level value="WARNING"/>
 			<mean_values value="()"/>
 			<move_to_preprocess value="False"/>
 			<offload_unsupported_operations_to_tf value="False"/>
-			<output value="Conv_1_bn/FusedBatchNorm_1"/>
+			<output value="global_average_pooling2d_1/Mean"/>
 			<output_dir value="DIR"/>
 			<reverse_input_channels value="False"/>
 			<scale_values value="()"/>
