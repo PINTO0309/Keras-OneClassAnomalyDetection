@@ -327,9 +327,8 @@ If you want to try it immediately, please try Face Detection.
 
 1.Execute below.  
 ```bash
-$ git clone https://github.com/PINTO0309/Keras-OneClassAnomalyDetection.git
+$ git clone --recursive https://github.com/PINTO0309/Keras-OneClassAnomalyDetection.git
 $ cd Keras-OneClassAnomalyDetection
-$ git submodule update
 ```
 2.Connect USB Camera to RaspberryPi.  
 3.Execute below.  
