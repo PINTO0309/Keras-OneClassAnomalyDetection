@@ -4,6 +4,7 @@ import os
 import sys
 import numpy as np
 import argparse
+import platform
 from sklearn.neighbors import LocalOutlierFactor
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.externals import joblib
@@ -37,7 +38,8 @@ def main(camera_FPS, camera_width, camera_height, inference_scale, threshold, de
         net = IENetwork(model=model_xml, weights=model_bin)
         plugin = IEPlugin(device=device)
         if device == "CPU":
-            plugin.add_cpu_extension("lib/x86_64/libcpu_extension.so")
+            if platform.processor() == "x86_64":
+                plugin.add_cpu_extension("lib/x86_64/libcpu_extension.so")
         exec_net = plugin.load(network=net)
         input_blob = next(iter(net.inputs))
         print("loading finish")
