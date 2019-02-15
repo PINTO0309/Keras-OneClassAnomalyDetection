@@ -329,8 +329,17 @@ If you want to try it immediately, please try Face Detection.
 
 1.Execute below.  
 ```bash
+$ sudo apt-get install -y python-pip python3-pip python3-scipy libhdf5-dev libatlas-base-dev
+$ sudo -H pip3 install protobuf==3.6.0
+$ sudo pip3 uninstall tensorflow
+$ wget -O tensorflow-1.11.0-cp35-cp35m-linux_armv7l.whl https://github.com/PINTO0309/Tensorflow-bin/raw/master/tensorflow-1.11.0-cp35-cp35m-linux_armv7l_jemalloc.whl
+$ sudo pip3 install tensorflow-1.11.0-cp35-cp35m-linux_armv7l.whl
+$ rm tensorflow-1.11.0-cp35-cp35m-linux_armv7l.whl
+$ sudo -H pip3 install scikit-learn==0.20.2
 $ git clone --recursive https://github.com/PINTO0309/Keras-OneClassAnomalyDetection.git
 $ cd Keras-OneClassAnomalyDetection
+$ git submodule init
+$ git submodule update
 ```
 2.Connect USB Camera to RaspberryPi.  
 3.Execute below.  
