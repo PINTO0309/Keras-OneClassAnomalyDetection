@@ -33,8 +33,12 @@ def main(camera_FPS, camera_width, camera_height, inference_scale, threshold, de
 
         # DOC
         print("DOC Model loading...")
-        model_xml="irmodels/tensorflow/FP32/weights.xml"
-        model_bin="irmodels/tensorflow/FP32/weights.bin"
+        if device == "MYRIAD":
+            model_xml="irmodels/tensorflow/FP16/weights.xml"
+            model_bin="irmodels/tensorflow/FP16/weights.bin"
+        else:
+            model_xml="irmodels/tensorflow/FP32/weights.xml"
+            model_bin="irmodels/tensorflow/FP32/weights.bin"
         net = IENetwork(model=model_xml, weights=model_bin)
         plugin = IEPlugin(device=device)
         if device == "CPU":
