@@ -2285,7 +2285,7 @@
 			<input value="input_1"/>
 			<input_model value="DIR/weights.pb"/>
 			<input_model_is_text value="False"/>
-			<log_level value="WARNING"/>
+			<log_level value="ERROR"/>
 			<mean_values value="()"/>
 			<move_to_preprocess value="False"/>
 			<offload_unsupported_operations_to_tf value="False"/>
