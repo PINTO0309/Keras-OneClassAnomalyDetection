@@ -335,6 +335,7 @@ $ cd Keras-OneClassAnomalyDetection
 2.Connect USB Camera to RaspberryPi.  
 3.Execute below.  
 ```bash
+$ sudo -H pip3 install scikit-learn
 $ cd OneClassAnomalyDetection-RaspberryPi3/DOC
 $ python3 main.py
 ```
