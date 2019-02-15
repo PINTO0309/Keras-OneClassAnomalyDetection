@@ -338,7 +338,7 @@ $ rm tensorflow-1.11.0-cp35-cp35m-linux_armv7l.whl
 $ sudo -H pip3 install scikit-learn==0.20.2
 $ git clone --recursive https://github.com/PINTO0309/Keras-OneClassAnomalyDetection.git
 $ cd Keras-OneClassAnomalyDetection
-$ git pull origin master
+$ git submodule init
 $ git submodule update
 ```
 2.Connect USB Camera to RaspberryPi.  
