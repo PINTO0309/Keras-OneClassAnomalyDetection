@@ -18,19 +18,20 @@ To be honest, I am not engaged in the work of making a program.
 # Environment (example)
 1. Ubuntu 16.04
 2. Geforce GTX 1070
-3. CUDA 9.0 + cuDNN 7.2
-3. Python 3.5
-4. Tensorflow-gpu 1.12.0 (pip install)
-5. Keras 2.2.4
-6. PyTorch 1.0.0
-7. torchvision 0.2.1
-8. Caffe
-9. numpy 1.15.3
-10. matplotlib 3.0.1
-11. PIL 5.3.0
-12. OpenCV 4.0.1-openvino
-13. sklearn 0.20.0
-14. OpenVINO R5 2018.5.445
+3. LattePanda Alpha (GPU = Intel HD Graphics 615)
+4. CUDA 9.0 + cuDNN 7.2
+5. Python 3.5
+6. Tensorflow-gpu 1.12.0 (pip install)
+7. Keras 2.2.4
+8. PyTorch 1.0.0
+9. torchvision 0.2.1
+10. Caffe
+11. numpy 1.15.3
+12. matplotlib 3.0.1
+13. PIL 5.3.0
+14. OpenCV 4.0.1-openvino
+15. sklearn 0.20.0
+16. OpenVINO R5 2018.5.445
 
 # Translating shinmura0's article
 ## 0. Table of contents
