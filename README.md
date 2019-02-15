@@ -329,13 +329,13 @@ If you want to try it immediately, please try Face Detection.
 
 1.Execute below.  
 ```bash
+$ sudo -H pip3 install scikit-learn
 $ git clone --recursive https://github.com/PINTO0309/Keras-OneClassAnomalyDetection.git
 $ cd Keras-OneClassAnomalyDetection
 ```
 2.Connect USB Camera to RaspberryPi.  
 3.Execute below.  
 ```bash
-$ sudo -H pip3 install scikit-learn
 $ cd OneClassAnomalyDetection-RaspberryPi3/DOC
 $ python3 main.py
 ```
