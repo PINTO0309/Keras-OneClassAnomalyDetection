@@ -648,8 +648,8 @@ $ sudo python3 /opt/intel/computer_vision_sdk/deployment_tools/model_optimizer/m
 ```txt
 Model Optimizer arguments:
 Common parameters:
-	- Path to the Input Model: 	/home/b920405/git/Keras-OneClassAnomalyDetection/models/tensorflow/weights.pb
-	- Path for generated IR: 	/home/b920405/git/Keras-OneClassAnomalyDetection/irmodels/tensorflow/FP32
+	- Path to the Input Model: 	/home/xxxx/git/Keras-OneClassAnomalyDetection/models/tensorflow/weights.pb
+	- Path for generated IR: 	/home/xxxx/git/Keras-OneClassAnomalyDetection/irmodels/tensorflow/FP32
 	- IR output name: 	weights
 	- Log level: 	ERROR
 	- Batch: 	1
@@ -679,8 +679,8 @@ Model Optimizer version: 	1.5.12.49d067a0
   from ._conv import register_converters as _register_converters
 
 [ SUCCESS ] Generated IR model.
-[ SUCCESS ] XML file: /home/b920405/git/Keras-OneClassAnomalyDetection/irmodels/tensorflow/FP32/weights.xml
-[ SUCCESS ] BIN file: /home/b920405/git/Keras-OneClassAnomalyDetection/irmodels/tensorflow/FP32/weights.bin
+[ SUCCESS ] XML file: /home/xxxx/git/Keras-OneClassAnomalyDetection/irmodels/tensorflow/FP32/weights.xml
+[ SUCCESS ] BIN file: /home/xxxx/git/Keras-OneClassAnomalyDetection/irmodels/tensorflow/FP32/weights.bin
 [ SUCCESS ] Total execution time: 5.59 seconds. 
 ```
 ### 13-3. Keras -> ONNX -> OpenVINO
