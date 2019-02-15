@@ -329,7 +329,8 @@ If you want to try it immediately, please try Face Detection.
 
 1.Execute below.  
 ```bash
-$ sudo -H pip3 install scikit-learn
+$ sudo -H pip3 install scikit-learn==0.20.2 keras==2.2.4
+$ sudo apt install libatlas-base-dev
 $ git clone --recursive https://github.com/PINTO0309/Keras-OneClassAnomalyDetection.git
 $ cd Keras-OneClassAnomalyDetection
 ```
