@@ -813,6 +813,40 @@ $ mmconvert \
 -df pytorch \
 -om models/pytorch/weights.pth
 ```
+### 13-6. Keras -> Tensorflow -> Tensorflow Lite
+```bash
+$ python3 keras2tensorflow/keras_to_tensorflow.py \
+--input_model="OneClassAnomalyDetection-RaspberryPi3/DOC/model/weights.h5" \
+--input_model_json="OneClassAnomalyDetection-RaspberryPi3/DOC/model/model.json" \
+--output_model="models/tensorflow/weights.pb"
+```
+```bash
+$ cd ~
+$ wget https://github.com/PINTO0309/Bazel_bin/blob/master/0.17.2/Raspbian_armhf/install.sh
+$ sudo chmod +x install.sh
+$ ./install.sh
+$ git clone -b v1.11.0 https://github.com/tensorflow/tensorflow.git
+$ cd tensorflow
+$ git checkout v1.11.0
+$ ./tensorflow/contrib/lite/tools/make/download_dependencies.sh
+$ sudo bazel build tensorflow/contrib/lite/toco:toco
+```
+```bash
+$ cd ~/tensorflow
+$ mkdir output
+$ cp ~/Keras-OneClassAnomalyDetection/models/tensorflow/weights.tflite.pb . #<-- "." required
+$ sudo bazel-bin/tensorflow/contrib/lite/toco/toco \
+--input_file=weights.pb  \
+--input_format=TENSORFLOW_GRAPHDEF \
+--output_format=TFLITE \
+--output_file=output/weights.tflite \
+--input_shapes=1,96,96,3 \
+--inference_type=FLOAT \
+--input_type=FLOAT \
+--input_arrays=input_1 \
+--output_arrays=global_average_pooling2d_1/Mean \
+--post_training_quantize
+```
 ## 14. Issue
 **https://software.intel.com/en-us/articles/OpenVINO-ModelOptimizer#FAQ76**  
 **https://software.intel.com/en-us/forums/computer-vision/topic/802689**  
