@@ -72,6 +72,7 @@ To be honest, I am not engaged in the work of making a program.
   13-3. **[Keras -> ONNX -> OpenVINO](#13-3-keras---onnx---openvino)**  
   13-4. **[Keras -> Caffe -> OpenVINO](#13-4-keras---caffe---openvino)**  
   13-5. **[Keras -> PyTorch](#13-5-keras---pytorch)**  
+  13-6. **[Keras -> Tensorflow -> Tensorflow Lite](#13-6-keras---tensorflow---tensorflow-lite)**
 14. **[Issue](#14-issue)**  
 
 ## 1. Introduction
