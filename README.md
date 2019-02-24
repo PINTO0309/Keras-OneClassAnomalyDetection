@@ -22,7 +22,7 @@ To be honest, I am not engaged in the work of making a program.
 3. LattePanda Alpha (GPU = Intel HD Graphics 615)
 4. RaspberryPi3 (CPU = Coretex-A53)
 5. Python 3.5
-6. Tensorflow-gpu 1.12.0 (pip install) or Tensorflow 1.11.0 (self-build wheel)
+6. Tensorflow-gpu 1.12.0 (pip install) or Tensorflow 1.11.0 (self-build wheel) or Tensorflow Lite 1.11.0 (self-build wheel)
 7. Keras 2.2.4
 8. PyTorch 1.0.0
 9. torchvision 0.2.1
