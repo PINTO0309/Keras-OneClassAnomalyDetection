@@ -1,11 +1,12 @@
 # Keras-OneClassAnomalyDetection
 Learning Deep Features for One-Class Classification (AnomalyDetection).  
 Corresponds RaspberryPi3.  
-Convert to Tensorflow, ONNX, Caffe, PyTorch.  
+Convert to Tensorflow, ONNX, Caffe, PyTorch, Tensorflow Lite.  
   
 **[Jan 19, 2019] First Release. It corresponds to RaspberryPi3.**  
 **[Jan 20, 2019] I have started work to make it compatible with OpenVINO.**  
 **[Feb 15, 2019] Support for OpenVINO. [x86_64 only. CPU/GPU(Intel HD Graphics)]**  
+**[Feb 24, 2019] Support for Tensorflow Lite. [for RaspberryPi3]**
 
 # Introduction
 This repository was inspired by **[Image abnormality detection using deep learning ーPapers and implementationー - Qiita - shinmura0](https://qiita.com/shinmura0/items/cfb51f66b2d172f2403b)**, **[Image inspection machine for people trying hard - Qiita - shinmura0](https://qiita.com/shinmura0/items/7f4298b75d6b788bba80)** and was created.    
