@@ -836,7 +836,7 @@ $ sudo bazel build tensorflow/contrib/lite/toco:toco
 ```bash
 $ cd ~/tensorflow
 $ mkdir output
-$ cp ~/Keras-OneClassAnomalyDetection/models/tensorflow/weights.tflite.pb . #<-- "." required
+$ cp ~/Keras-OneClassAnomalyDetection/models/tensorflow/weights.pb . #<-- "." required
 $ sudo bazel-bin/tensorflow/contrib/lite/toco/toco \
 --input_file=weights.pb  \
 --input_format=TENSORFLOW_GRAPHDEF \
