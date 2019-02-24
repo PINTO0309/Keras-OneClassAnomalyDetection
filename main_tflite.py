@@ -4,13 +4,16 @@ import os
 import sys
 import numpy as np
 import argparse
-import platform
 from sklearn.neighbors import LocalOutlierFactor
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.externals import joblib
-from openvino.inference_engine import IENetwork, IEPlugin
+from tensorflow.contrib.lite.python import interpreter as interpreter_wrapper
 
-def main(camera_FPS, camera_width, camera_height, inference_scale, threshold, device):
+def main(camera_FPS, camera_width, camera_height, inference_scale, threshold, num_threads):
+
+    interpreter = None
+    input_details = None
+    output_details = None
 
     path = "pictures/"
     if not os.path.exists(path):
@@ -31,19 +34,11 @@ def main(camera_FPS, camera_width, camera_height, inference_scale, threshold, de
 
         # DOC
         print("DOC Model loading...")
-        if device == "MYRIAD":
-            model_xml="irmodels/tensorflow/FP16/weights.xml"
-            model_bin="irmodels/tensorflow/FP16/weights.bin"
-        else:
-            model_xml="irmodels/tensorflow/FP32/weights.xml"
-            model_bin="irmodels/tensorflow/FP32/weights.bin"
-        net = IENetwork(model=model_xml, weights=model_bin)
-        plugin = IEPlugin(device=device)
-        if device == "CPU":
-            if platform.processor() == "x86_64":
-                plugin.add_cpu_extension("lib/x86_64/libcpu_extension.so")
-        exec_net = plugin.load(network=net)
-        input_blob = next(iter(net.inputs))
+        interpreter = interpreter_wrapper.Interpreter(model_path="models/tensorflow/weights.tflite")
+        interpreter.allocate_tensors()
+        interpreter.set_num_threads(num_threads)
+        input_details = interpreter.get_input_details()
+        output_details = interpreter.get_output_details()
         print("loading finish")
     else:
         print("Nothing model folder")
@@ -96,11 +91,11 @@ def main(camera_FPS, camera_width, camera_height, inference_scale, threshold, de
             prepimg = prepimg[crop_start_y:crop_end_y, crop_start_x:crop_end_x]
             prepimg = np.array(prepimg).reshape((1, inference_scale, inference_scale, 3))
             prepimg = prepimg / 255
-            prepimg = prepimg.transpose((0, 3, 1, 2))
 
-            exec_net.start_async(request_id = 0, inputs={input_blob: prepimg})
-            exec_net.requests[0].wait(-1)
-            outputs = exec_net.requests[0].outputs["Reshape_"]
+            interpreter.set_tensor(input_details[0]['index'], np.array(prepimg, dtype=np.float32))
+            interpreter.invoke()
+            outputs = interpreter.get_tensor(output_details[0]['index'])
+
             outputs = outputs.reshape((len(outputs), -1))
             outputs = ms.transform(outputs)
             score = -clf._decision_function(outputs)
@@ -148,13 +143,13 @@ if __name__ == '__main__':
     parser.add_argument("-cht","--camera_height",dest="camera_height",type=int,default=240,help="USB Camera Height. (Default=240)")
     parser.add_argument("-sc","--inference_scale",dest="inference_scale",type=int,default=96,help="Inference scale. (Default=96)")
     parser.add_argument("-th","--threshold",dest="threshold",type=int,default=2.0,help="Threshold. (Default=2.0)")
-    parser.add_argument("-d","--device",dest="device",default="CPU",help="Device. CPU/GPU (Default=CPU) GPU=Intel HD Graphics.")
+    parser.add_argument("-nt","--num_threads",dest="num_threads",type=int,default=4,help="Number of inference threads. (Default=4)")
     args = parser.parse_args()
     camera_FPS = args.camera_FPS
     camera_width = args.camera_width
     camera_height = args.camera_height
     inference_scale = args.inference_scale
     threshold = args.threshold
-    device = args.device
+    num_threads = args.num_threads
 
-    main(camera_FPS, camera_width, camera_height, inference_scale, threshold, device)
+    main(camera_FPS, camera_width, camera_height, inference_scale, threshold, num_threads)
