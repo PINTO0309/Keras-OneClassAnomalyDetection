@@ -17,10 +17,10 @@ I only want to verify the effectiveness of his wonderful article content in a pr
 To be honest, I am not engaged in the work of making a program.  
 
 # Environment (example)
-1. Ubuntu 16.04
-2. Geforce GTX 1070
+1. Ubuntu 16.04 (GPU = Geforce GTX 1070)
+2. CUDA 9.0 + cuDNN 7.2
 3. LattePanda Alpha (GPU = Intel HD Graphics 615)
-4. CUDA 9.0 + cuDNN 7.2
+4. RaspberryPi3 (CPU = Coretex-A53)
 5. Python 3.5
 6. Tensorflow-gpu 1.12.0 (pip install) or Tensorflow 1.11.0 (self-build wheel)
 7. Keras 2.2.4
