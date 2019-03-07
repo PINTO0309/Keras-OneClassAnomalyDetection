@@ -1,11 +1,12 @@
 # Keras-OneClassAnomalyDetection
 Learning Deep Features for One-Class Classification (AnomalyDetection).  
 Corresponds RaspberryPi3.  
-Convert to Tensorflow, ONNX, Caffe, PyTorch.  
+Convert to Tensorflow, ONNX, Caffe, PyTorch, Tensorflow Lite.  
   
 **[Jan 19, 2019] First Release. It corresponds to RaspberryPi3.**  
 **[Jan 20, 2019] I have started work to make it compatible with OpenVINO.**  
 **[Feb 15, 2019] Support for OpenVINO. [x86_64 only. CPU/GPU(Intel HD Graphics)]**  
+**[Feb 24, 2019] Support for Tensorflow Lite. [for RaspberryPi3]**
 
 # Introduction
 This repository was inspired by **[Image abnormality detection using deep learning ーPapers and implementationー - Qiita - shinmura0](https://qiita.com/shinmura0/items/cfb51f66b2d172f2403b)**, **[Image inspection machine for people trying hard - Qiita - shinmura0](https://qiita.com/shinmura0/items/7f4298b75d6b788bba80)** and was created.    
@@ -16,12 +17,12 @@ I only want to verify the effectiveness of his wonderful article content in a pr
 To be honest, I am not engaged in the work of making a program.  
 
 # Environment (example)
-1. Ubuntu 16.04
-2. Geforce GTX 1070
+1. Ubuntu 16.04 (GPU = Geforce GTX 1070)
+2. CUDA 9.0 + cuDNN 7.2
 3. LattePanda Alpha (GPU = Intel HD Graphics 615)
-4. CUDA 9.0 + cuDNN 7.2
+4. RaspberryPi3 (CPU = Coretex-A53)
 5. Python 3.5
-6. Tensorflow-gpu 1.12.0 (pip install) or Tensorflow 1.11.0 (self-build wheel)
+6. Tensorflow-gpu 1.12.0 (pip install) or Tensorflow 1.11.0 (self-build wheel) or Tensorflow Lite 1.11.0 (self-build wheel)
 7. Keras 2.2.4
 8. PyTorch 1.0.0
 9. torchvision 0.2.1
@@ -71,6 +72,7 @@ To be honest, I am not engaged in the work of making a program.
   13-3. **[Keras -> ONNX -> OpenVINO](#13-3-keras---onnx---openvino)**  
   13-4. **[Keras -> Caffe -> OpenVINO](#13-4-keras---caffe---openvino)**  
   13-5. **[Keras -> PyTorch](#13-5-keras---pytorch)**  
+  13-6. **[Keras -> Tensorflow -> Tensorflow Lite](#13-6-keras---tensorflow---tensorflow-lite)**
 14. **[Issue](#14-issue)**  
 
 ## 1. Introduction
@@ -812,6 +814,50 @@ $ mmconvert \
 -in OneClassAnomalyDetection-RaspberryPi3/DOC/model/model.json \
 -df pytorch \
 -om models/pytorch/weights.pth
+```
+### 13-6. Keras -> Tensorflow -> Tensorflow Lite
+```bash
+$ python3 keras2tensorflow/keras_to_tensorflow.py \
+--input_model="OneClassAnomalyDetection-RaspberryPi3/DOC/model/weights.h5" \
+--input_model_json="OneClassAnomalyDetection-RaspberryPi3/DOC/model/model.json" \
+--output_model="models/tensorflow/weights.pb"
+```
+```bash
+$ sudo apt-get install -y libhdf5-dev libc-ares-dev libeigen3-dev
+$ sudo pip3 install keras_applications==1.0.7 --no-deps
+$ sudo pip3 install keras_preprocessing==1.0.9 --no-deps
+$ sudo pip3 install h5py==2.9.0
+$ sudo apt-get install -y openmpi-bin libopenmpi-dev
+$ sudo pip3 uninstall tensorflow
+$ wget -O tensorflow-1.11.0-cp35-cp35m-linux_armv7l.whl https://github.com/PINTO0309/Tensorflow-bin/raw/master/tensorflow-1.11.0-cp35-cp35m-linux_armv7l_jemalloc_multithread.whl
+$ sudo pip3 install tensorflow-1.11.0-cp35-cp35m-linux_armv7l.whl
+```
+```bash
+$ cd ~
+$ wget https://github.com/PINTO0309/Bazel_bin/blob/master/0.17.2/Raspbian_armhf/install.sh
+$ sudo chmod +x install.sh
+$ ./install.sh
+$ git clone -b v1.11.0 https://github.com/tensorflow/tensorflow.git
+$ cd tensorflow
+$ git checkout v1.11.0
+$ ./tensorflow/contrib/lite/tools/make/download_dependencies.sh
+$ sudo bazel build tensorflow/contrib/lite/toco:toco
+```
+```bash
+$ cd ~/tensorflow
+$ mkdir output
+$ cp ~/Keras-OneClassAnomalyDetection/models/tensorflow/weights.pb . #<-- "." required
+$ sudo bazel-bin/tensorflow/contrib/lite/toco/toco \
+--input_file=weights.pb  \
+--input_format=TENSORFLOW_GRAPHDEF \
+--output_format=TFLITE \
+--output_file=output/weights.tflite \
+--input_shapes=1,96,96,3 \
+--inference_type=FLOAT \
+--input_type=FLOAT \
+--input_arrays=input_1 \
+--output_arrays=global_average_pooling2d_1/Mean \
+--post_training_quantize
 ```
 ## 14. Issue
 **https://software.intel.com/en-us/articles/OpenVINO-ModelOptimizer#FAQ76**  
