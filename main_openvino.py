@@ -8,7 +8,10 @@ import platform
 from sklearn.neighbors import LocalOutlierFactor
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.externals import joblib
-from openvino.inference_engine import IENetwork, IEPlugin
+try:
+    from armv7l.openvino.inference_engine import IENetwork, IEPlugin
+except:
+    from openvino.inference_engine import IENetwork, IEPlugin
 
 def main(camera_FPS, camera_width, camera_height, inference_scale, threshold, device):
 
